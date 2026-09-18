@@ -84,9 +84,6 @@ export const experience = {
         'Support and resistance levels marked straight on the chart',
         'Pick a time frame that suits you and read the market at your own pace',
       ],
-      image: '/exp-chart-analysis.webp',
-      imageAlt: 'Chart analysis view on the Memorifund Ai Platform platform',
-      imageW: 700, imageH: 525,
     },
     {
       title: 'Paper Trading Simulator',
@@ -96,9 +93,6 @@ export const experience = {
         'The same order screen you get on a live account',
         'Reset the balance and start over whenever you like',
       ],
-      image: '/exp-paper-trading.webp',
-      imageAlt: 'Paper trading simulator with a virtual balance on the Memorifund Ai Platform platform',
-      imageW: 700, imageH: 525,
     },
     {
       title: 'AI Strategy Builder',
@@ -108,9 +102,6 @@ export const experience = {
         'Set your own entry, exit and stop levels on one screen',
         'Keep as many strategies as you like and tweak them later',
       ],
-      image: '/simple-clear-investing.webp',
-      imageAlt: 'Strategy builder view on the Memorifund Ai Platform platform',
-      imageW: 540, imageH: 568,
     },
     {
       title: 'Risk Management',
@@ -120,9 +111,6 @@ export const experience = {
         'Stop levels in place so no single trade does too much damage',
         'Clear balances and records you can check at any time',
       ],
-      image: '/convenient-reliable-management.webp',
-      imageAlt: 'Risk management dashboard on the Memorifund Ai Platform platform',
-      imageW: 620, imageH: 496,
     },
   ],
 }
@@ -219,9 +207,6 @@ export const portfolio = {
     'Clear guidance at every step',
     'Withdraw your funds whenever you need to',
   ],
-  image: '/portfolio-management.webp',
-  imageAlt: 'Manage your portfolio with data-driven trading on the Memorifund Ai Platform platform',
-  imageW: 1100, imageH: 732,
 }
 
 // Full FAQ for the standalone /faq page. Answers are the platform's own
