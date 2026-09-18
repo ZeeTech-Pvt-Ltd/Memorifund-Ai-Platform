@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="form-wrap reveal">
           <div className="form-ring"></div>
           <div className="reg-card">
-            <h3>Register Now</h3>
+            <h2>Register Now</h2>
             <p className="sub">It only takes about two minutes to get started</p>
             <RegistrationForm />
           </div>

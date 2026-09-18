@@ -5,6 +5,9 @@ import { steps, trustStrip } from '../data/content.js'
 // so its heading becomes the page's single H1 (styling stays identical).
 export default function HowItWorks({ asPage = false }) {
   const Heading = asPage ? 'h1' : 'h2'
+  // Track the section heading one level down, so the step titles never skip a
+  // level (h1 -> h3 on the standalone page was failing the a11y heading order).
+  const StepHeading = asPage ? 'h2' : 'h3'
   return (
     <section className="section how" id="how">
       <div className="container">
@@ -24,7 +27,7 @@ export default function HowItWorks({ asPage = false }) {
               <div className={`step-ico ${step.green ? 'green' : ''}`}>
                 <Icon name={step.icon} />
               </div>
-              <h3>{step.title}</h3>
+              <StepHeading>{step.title}</StepHeading>
               <p>{step.text}</p>
               <a className="btn-link" href="/" data-scroll="#register">
                 {step.cta} <ArrowRight size={16} />
