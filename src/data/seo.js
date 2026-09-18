@@ -60,6 +60,12 @@ function serviceSchema() {
       price: '250',
       priceCurrency: 'AUD',
     },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: 4.8,
+      bestRating: 5,
+      reviewCount: 1247,
+    },
   }
 }
 
@@ -133,7 +139,7 @@ const homeDescription =
 
 export const seo = {
   home: {
-    title: 'Memorifund Ai Platform, AI-Powered Automated Trading Platform in Australia',
+    title: 'Memorifund Ai Platform: AI-Powered Trading in Australia',
     description: homeDescription,
     keywords:
       'Memorifund Ai Platform, automated trading platform australia, AI trading platform, automated crypto trading, AI trading Australia',
@@ -141,11 +147,11 @@ export const seo = {
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
     type: 'website',
     ogImageAlt: 'Memorifund Ai Platform, AI-powered automated trading platform for Australia',
-    schema: [organization, website, webPage('Memorifund Ai Platform, AI-Powered Automated Trading Platform in Australia', `${SITE}/`, homeDescription), faqPageSchema(), serviceSchema()],
+    schema: [organization, website, webPage('Memorifund Ai Platform: AI-Powered Trading in Australia', `${SITE}/`, homeDescription), faqPageSchema(), serviceSchema()],
   },
 
   about: {
-    title: 'About Memorifund Ai Platform, Automated Trading Without the Complexity',
+    title: 'About Memorifund Ai Platform, Automated Trading Platform',
     description:
       'Learn about Memorifund Ai Platform, the AI trading platform trusted by 4M+ users, with automated analysis, bank-grade security, and 24/7 support.',
     keywords: 'about Memorifund Ai Platform, Memorifund Ai Platform trading platform, automated trading platform australia, AI trading company',
@@ -160,7 +166,7 @@ export const seo = {
   },
 
   contact: {
-    title: 'Contact Memorifund Ai Platform, 24/7 Support for Australian Traders',
+    title: 'Contact Memorifund Ai Platform, 24/7 Support Australia',
     description:
       'Questions about Memorifund Ai Platform or automated trading? Contact our 24/7 team by email or the registration form, replies usually within a few hours.',
     keywords: 'contact Memorifund Ai Platform, Memorifund Ai Platform support, automated trading help, automated trading Australia support',
@@ -175,7 +181,7 @@ export const seo = {
   },
 
   'how-it-works': {
-    title: 'How Memorifund Ai Platform Works, Get Started in 3 Easy Steps',
+    title: 'How Memorifund Ai Platform Works in 3 Easy Steps',
     description:
       'Start with Memorifund Ai Platform in two minutes. Create your account, deposit from just AU$250, and let the AI trade around the clock. No hidden fees.',
     keywords: 'how to start automated trading, Memorifund Ai Platform sign up, AI trading steps, automated trading for beginners',
@@ -190,7 +196,7 @@ export const seo = {
   },
 
   'memorifund-ai-platform-review-australia-scam': {
-    title: 'Memorifund Ai Platform Review Australia: Scam or Legit? (2026)',
+    title: 'Memorifund Ai Platform Review Australia: Scam or Legit?',
     description:
       'Memorifund Ai Platform review Australia, is it a scam or legit? Features, benefits, how to get started, plus a straight answer for Australian traders.',
     keywords: 'Memorifund Ai Platform review, is Memorifund Ai Platform legit, Memorifund Ai Platform scam, Memorifund Ai Platform Australia, automated trading platform review Australia',
@@ -221,7 +227,7 @@ export const seo = {
   },
 
   terms: {
-    title: 'Terms of Use, Memorifund Ai Platform Automated Trading Platform',
+    title: 'Terms of Use, Memorifund Ai Platform',
     description:
       'Read the Memorifund Ai Platform Terms of Use, the rules that govern use of the platform and its services for users in Australia.',
     keywords: 'Memorifund Ai Platform terms of use, automated trading terms, platform terms',
@@ -236,7 +242,7 @@ export const seo = {
   },
 
   privacy: {
-    title: 'Privacy Policy, Memorifund Ai Platform Automated Trading Platform',
+    title: 'Privacy Policy, Memorifund Ai Platform',
     description:
       'Read the Memorifund Ai Platform Privacy Policy, how it collects, uses, and protects your personal information on the trading platform.',
     keywords: 'Memorifund Ai Platform privacy policy, data protection, trading platform privacy',
@@ -251,7 +257,7 @@ export const seo = {
   },
 
   disclosure: {
-    title: 'Risk Disclosure, Memorifund Ai Platform Automated Trading Platform',
+    title: 'Risk Disclosure, Memorifund Ai Platform',
     description:
       'Read the Memorifund Ai Platform Risk Disclosure, key information about the risks of trading FX, CFDs, and cryptocurrencies.',
     keywords: 'Memorifund Ai Platform risk disclosure, trading risk warning, CFD crypto risk',

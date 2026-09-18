@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import useReveal from './hooks/useReveal.js'
 import Seo from './components/Seo.jsx'
 import Header from './components/Header.jsx'
@@ -75,6 +75,26 @@ export default function App() {
     window.addEventListener('popstate', onPop)
     return () => window.removeEventListener('popstate', onPop)
   }, [])
+
+  // GA4 page_view on client-side route changes. Clean-path navigation uses
+  // pushState, which the browser does not report to Analytics on its own, so
+  // without this every route past the landing page would go untracked.
+  // The initial view is skipped: gtag('config') in index.html already sent it,
+  // and counting it twice would inflate homepage sessions.
+  const firstView = useRef(true)
+  useEffect(() => {
+    if (firstView.current) {
+      firstView.current = false
+      return
+    }
+    // <Seo/> sets document.title from a child effect, which React flushes
+    // before this parent effect — so the title read here is the new one.
+    window.gtag?.('event', 'page_view', {
+      page_path: location.pathname + location.search,
+      page_location: location.href,
+      page_title: document.title,
+    })
+  }, [route])
 
   // SPA link handling: "/about"-style links navigate without a page reload;
   // section anchors (#register, #how…) scroll on the current page but keep the
