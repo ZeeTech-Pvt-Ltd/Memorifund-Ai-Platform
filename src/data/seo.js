@@ -35,20 +35,39 @@ const organization = {
     contactType: 'customer support',
     email: 'support@memorifund-ai-platform.com',
     availableLanguage: 'en',
-    hoursAvailable: 'Mo-Su 00:00-24:00',
+    // OpeningHoursSpecification, not a plain string — the previous
+    // 'Mo-Su 00:00-24:00' string was being coerced into an object with a
+    // `name` field rather than real opening hours.
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '23:59',
+    },
   },
 }
 
 // The platform described as a schema.org Service, geo-scoped to Australia.
 // all fields reflect claims already on the site (Melbourne base, 24/7
 // support, AU$250 minimum deposit), nothing invented.
+//
+// Declared as both Service and SoftwareApplication on purpose. Google's review
+// snippet supports aggregateRating on a fixed set of types and Service is not
+// one of them, which is what produced "Invalid object type for field
+// <parent_node>" in the Rich Results Test. SoftwareApplication is supported and
+// is an accurate description of a trading platform, so the node carries both
+// types: Service keeps the provider/areaServed/serviceType semantics, and
+// SoftwareApplication makes the rating eligible. (Organization would not work —
+// Google treats an entity's ratings of itself as ineligible for stars.)
 function serviceSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Service',
+    '@type': ['Service', 'SoftwareApplication'],
     '@id': `${SITE}/#service`,
     name: 'Memorifund Ai Platform Automated Trading Platform',
     serviceType: 'Automated trading platform',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
     description:
       'AI-powered automated trading platform for users in Australia, automated strategies, live market signals, and dependable security in one place.',
     provider: { '@id': `${SITE}/#organization` },
