@@ -143,11 +143,13 @@ mark {
 .header.scrolled { box-shadow: 0 6px 24px -12px rgba(0, 0, 0,.16); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 72px; }
 .logo { display: inline-flex; align-items: center; gap: 11px; }
+/* The tile and glyph are painted by the inline SVG in LogoMark, so this only
+   holds the layout and the gold glow behind it. */
 .logo-mark {
-  width: 40px; height: 40px; border-radius: 13px; background: var(--grad);
-  display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 22px;
+  display: grid; place-items: center; border-radius: 13px;
   box-shadow: 0 8px 18px -6px rgba(217, 180, 90,.5);
 }
+.logo-mark svg { display: block; }
 .logo-text { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; }
 .logo-text span { color: var(--primary); }
 .logo-text.on-dark span { color: #F0D080; }
@@ -1394,7 +1396,6 @@ body.menu-open { overflow: hidden; }
 /* ---------- Contrast fix: dark text on gold gradient ---------- */
 .btn-primary { color: #241503; }
 .btn-primary:hover { color: #241503; }
-.logo-mark { color: #241503; }
 .metric-cell.solid .num, .metric-cell.solid .lbl { color: #241503; }
 .btn-light { background: #241503; color: #F0D080; box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.45); }
 .btn-light:hover { background: #0B0A08; color: #F0D080; }
