@@ -1459,6 +1459,14 @@ body.menu-open { overflow: hidden; }
 .portfolio-panel .dash-bal { font-size: 26px; }
 
 /* ---------- Experience visual cards ---------- */
+/* Supplied artwork in place of the SVG chart card. Same frame as .visual-card
+   so the two kinds of visual sit at the same weight in the row. */
+.exp-shot {
+  margin: 0; width: 100%; max-width: 520px; margin-inline: auto;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-md); overflow: hidden;
+}
+.exp-shot img { display: block; width: 100%; height: auto; }
 .exp-visual .visual-card {
   background: var(--card); border: 1px solid var(--card-border); border-radius: var(--r-lg);
   box-shadow: var(--shadow-md); overflow: hidden; width: 100%; max-width: 520px; margin-inline: auto;

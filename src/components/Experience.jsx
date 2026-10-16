@@ -1,11 +1,32 @@
 import { experience } from '../data/content.js'
 import { CandleChart, AreaChart } from './ChartVisuals.jsx'
+import chartAnalysisShot from '../assets/shots/chart-analysis.webp'
+import paperTradingShot from '../assets/shots/paper-trading.webp'
 
-// Per-row visual captions (replaces the old stock webp images with original
-// inline SVG trading charts).
+// Per-row visual. Rows carrying a `shot` render the supplied artwork; the rest
+// fall back to the inline SVG chart card.
+//
+// The shots go in bare, with no "Memorifund Ai Platform" header and no Live
+// badge around them. They are supplied artwork, not screenshots of this
+// platform, and wrapping another product's interface in this site's chrome
+// would present it as the product.
 const visualMeta = [
-  { kind: 'candles', label: 'BTC/USD', note: '+2.4% · 24h' },
-  { kind: 'area', label: 'Paper balance', note: '$100,000 virtual' },
+  {
+    shot: {
+      src: chartAnalysisShot,
+      w: 1100,
+      h: 829,
+      alt: 'A Bitcoin candlestick chart with a price axis, beside a panel listing recent trades',
+    },
+  },
+  {
+    shot: {
+      src: paperTradingShot,
+      w: 1100,
+      h: 733,
+      alt: 'A practice trading screen showing a virtual balance, an order ticket and a list of assets',
+    },
+  },
   { kind: 'candles', label: 'Custom strategy', note: '3 conditions active' },
   { kind: 'area', label: 'Risk limits', note: 'Stop set at −3.5%' },
 ]
@@ -40,19 +61,32 @@ export default function Experience() {
               </div>
 
               <div className="exp-visual">
-                <div className="visual-card">
-                  <div className="visual-card-head">
-                    <span className="visual-brand"><span className="visual-brand-dot"></span> Memorifund Ai Platform</span>
-                    <span className="visual-live"><span className="dot"></span> Live</span>
-                  </div>
-                  <div className="visual-card-body">
-                    <div className="visual-meta">
-                      <span>{meta.label}</span>
-                      <span className="visual-note">{meta.note}</span>
+                {meta.shot ? (
+                  <figure className="exp-shot">
+                    <img
+                      src={meta.shot.src}
+                      alt={meta.shot.alt}
+                      width={meta.shot.w}
+                      height={meta.shot.h}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </figure>
+                ) : (
+                  <div className="visual-card">
+                    <div className="visual-card-head">
+                      <span className="visual-brand"><span className="visual-brand-dot"></span> Memorifund Ai Platform</span>
+                      <span className="visual-live"><span className="dot"></span> Live</span>
                     </div>
-                    {meta.kind === 'candles' ? <CandleChart height={190} /> : <AreaChart height={190} />}
+                    <div className="visual-card-body">
+                      <div className="visual-meta">
+                        <span>{meta.label}</span>
+                        <span className="visual-note">{meta.note}</span>
+                      </div>
+                      {meta.kind === 'candles' ? <CandleChart height={190} /> : <AreaChart height={190} />}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           )
