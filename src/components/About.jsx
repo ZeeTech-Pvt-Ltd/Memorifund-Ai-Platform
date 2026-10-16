@@ -1,4 +1,5 @@
 import CtaBanner from './CtaBanner.jsx'
+import PhotoBand from './PhotoBand.jsx'
 import TradingVisual from './TradingVisual.jsx'
 import { CandleChart, AreaChart } from './ChartVisuals.jsx'
 import { Check, ArrowRight, Icon } from './icons.jsx'
@@ -165,6 +166,13 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <PhotoBand
+        photo="screens"
+        kicker="How We Build"
+        title="Simple On The Surface, Careful Underneath"
+        text="Every screen is built so a first trade makes sense. The complexity sits in the engine, where you don't have to look at it."
+      />
 
       {/* Mission */}
       <section className="section about-section alt">

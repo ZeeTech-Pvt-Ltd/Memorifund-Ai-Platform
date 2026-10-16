@@ -1,4 +1,5 @@
 import { Icon, Check, ArrowRight } from './icons.jsx'
+import PhotoBand from './PhotoBand.jsx'
 import { steps, trustStrip } from '../data/content.js'
 
 // `asPage` is set when this section renders as the full /how-it-works page,
@@ -44,6 +45,13 @@ export default function HowItWorks({ asPage = false }) {
           ))}
         </div>
       </div>
+
+      <PhotoBand
+        photo="charts"
+        kicker="No Experience Needed"
+        title="You Don't Need To Know The Jargon First"
+        text="Most people start without a trading background. The platform explains each step as you reach it, and support is available around the clock if you'd rather ask."
+      />
     </section>
   )
 }

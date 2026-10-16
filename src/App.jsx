@@ -12,6 +12,7 @@ import Precision from './components/Precision.jsx'
 import CtaBanner from './components/CtaBanner.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import Portfolio from './components/Portfolio.jsx'
+import PhotoBand from './components/PhotoBand.jsx'
 import Faq from './components/Faq.jsx'
 import Capabilities from './components/Capabilities.jsx'
 import FinalCta from './components/FinalCta.jsx'
@@ -193,6 +194,12 @@ export default function App() {
     <Layout routeName="home">
       <Hero />
       <Metrics />
+      <PhotoBand
+        photo="market"
+        kicker="Always On"
+        title="Markets Do Not Wait For You To Be Awake"
+        text="Prices move through the night and across every timezone. The platform keeps watching while you're away, so you can catch up when it suits you instead of sitting at a screen."
+      />
       <Experience />
       <Priorities />
       <Features />
@@ -206,6 +213,12 @@ export default function App() {
 
       <Testimonials />
       <Portfolio />
+      <PhotoBand
+        photo="lines"
+        kicker="One Place"
+        title="Everything You Follow, In One Place"
+        text="Crypto, forex and stocks all sit together, so checking what moved doesn't mean switching between different tools."
+      />
       {/* Spec table first, then FAQ last so the final doubt-handling flows
           straight into the final sign-up CTA (no dry table in between). */}
       <Capabilities />
