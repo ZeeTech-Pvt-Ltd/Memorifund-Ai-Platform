@@ -104,23 +104,25 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="ct-field">
-                  <label htmlFor="ct-email">Email Address *</label>
-                  <input id="ct-email" name="email" type="email" placeholder="you@example.com" required autoComplete="email" />
-                </div>
+                <div className="ct-row ct-row-contact">
+                  <div className="ct-field">
+                    <label htmlFor="ct-email">Email Address *</label>
+                    <input id="ct-email" name="email" type="email" placeholder="you@example.com" required autoComplete="email" />
+                  </div>
 
-                <div className="ct-field">
-                  <label htmlFor="ct-phone">Phone Number *</label>
-                  <PhoneNumberInput
-                    id="ct-phone"
-                    name="phone"
-                    country={country}
-                    onCountryChange={setCountry}
-                    value={phone}
-                    onValueChange={setPhone}
-                    placeholder="0400 000 000"
-                    autoComplete="tel"
-                  />
+                  <div className="ct-field">
+                    <label htmlFor="ct-phone">Phone Number *</label>
+                    <PhoneNumberInput
+                      id="ct-phone"
+                      name="phone"
+                      country={country}
+                      onCountryChange={setCountry}
+                      value={phone}
+                      onValueChange={setPhone}
+                      placeholder="0400 000 000"
+                      autoComplete="tel"
+                    />
+                  </div>
                 </div>
 
                 {errMsg && <div className="form-message err">{errMsg}</div>}

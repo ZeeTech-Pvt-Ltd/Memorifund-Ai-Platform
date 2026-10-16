@@ -20,6 +20,9 @@
      Gold is left to buttons, charts, borders and labels, so headings read as
      a single voice instead of alternating between white and gold. */
   --heading: #F5F1E8;
+  /* Paragraph and list copy, 10.8:1 on the page background. Kept separate
+     from --muted, which still carries labels, captions and meta text. */
+  --body: #c1bfba;
   --line: rgba(255, 255, 255, 0.08);
   --white: #0B0A08;
   --card: rgba(255, 255, 255, 0.04);
@@ -244,9 +247,27 @@ body.menu-open { overflow: hidden; }
 }
 .reg-card h2 { text-align: center; font-size: 23px; font-weight: 800; }
 .reg-card .sub { text-align: center; color: var(--muted); font-size: 13.5px; margin: 6px 0 20px; }
-.field { display: grid; gap: 7px; margin-bottom: 14px; }
+/* minmax(0, 1fr) rather than the default auto column: an auto track sizes to
+   its content's max-content, and the phone field's max-content is the country
+   picker plus a full-width number input, which is wider than the column it now
+   shares with Email. */
+.field { display: grid; grid-template-columns: minmax(0, 1fr); gap: 7px; margin-bottom: 14px; }
 .field label { font-size: 13.5px; font-weight: 600; color: #B8AF9B; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+/* The Email + Phone row is split unevenly on purpose: the phone field carries
+   a country picker as well as the number, so an even split truncates the
+   example number in its placeholder. */
+.field-row-contact { grid-template-columns: 1fr 1.16fr; }
+/* Stacked well before the name row does. The phone field has to fit the
+   country picker plus a readable example number, and an even split runs out of
+   room for that far sooner than "Enter First Name" does. */
+@media (max-width: 640px) {
+  .field-row-contact { grid-template-columns: 1fr; }
+}
+/* Grid items default to min-width:auto, which lets the phone field's country
+   picker push the row wider than its column instead of letting the number
+   input shrink into the space that's left. */
+.field-row > * { min-width: 0; }
 .input {
   width: 100%; min-height: 50px; padding: 0 16px;
   border: 1.5px solid var(--line); border-radius: 12px;
@@ -274,8 +295,11 @@ body.menu-open { overflow: hidden; }
 .pn-wrap:focus-within { border-color: var(--primary); background: var(--card); box-shadow: 0 0 0 4px rgba(217, 180, 90,.12); }
 .field.error .pn-wrap, .pn-wrap.invalid { border-color: #D64545; }
 .pn-country {
-  display: inline-flex; align-items: center; gap: 7px;
-  padding: 0 11px 0 13px;
+  display: inline-flex; align-items: center; gap: 6px;
+  /* Tightened from 0 11px 0 13px: this field now shares a row with Email, and
+     the few pixels saved here are what keeps the number placeholder from
+     truncating mid digit. */
+  padding: 0 9px 0 11px;
   border: none; border-right: 1.5px solid var(--line);
   background: transparent; cursor: pointer;
   font: inherit; font-size: 15px; color: var(--ink);
@@ -286,7 +310,7 @@ body.menu-open { overflow: hidden; }
 .pn-input {
   flex: 1; min-width: 0;
   border: none; background: transparent;
-  padding: 0 16px;
+  padding: 0 12px;
   font: inherit; font-size: 15px; color: var(--ink);
   outline: none;
 }
@@ -590,18 +614,65 @@ body.menu-open { overflow: hidden; }
 .feat-duo-copy { display: grid; gap: 18px; justify-items: start; }
 
 /* ---------- Testimonials ---------- */
-.tst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+/* Auto-advancing slider. The track is a real horizontal scroller with scroll
+   snapping, so a trackpad swipe, a touch drag and the arrow keys all work on
+   it natively; the buttons and the timer just drive scrollTo on top of that.
+
+   The arrow row is an overlay with pointer-events off, so it can span the
+   whole slider to place one button at each edge without ever swallowing a
+   swipe or a click meant for the cards underneath. */
+.tst-slider { position: relative; }
+.tst-track {
+  display: flex; gap: 22px;
+  overflow-x: auto; overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  /* The card shadow reaches past the card, so the scroll box needs room for it
+     or overflow-y:hidden clips it flat at the bottom edge. */
+  padding-bottom: 26px;
+  margin-bottom: -26px;
+  scrollbar-width: none;
+}
+.tst-track::-webkit-scrollbar { display: none; }
+.tst-track:focus-visible { outline: 2px solid var(--primary-light); outline-offset: 4px; border-radius: var(--r-lg); }
 .tst-card {
+  flex: 0 0 calc((100% - 22px) / 2);
+  scroll-snap-align: start;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg);
-  padding: 26px; box-shadow: var(--shadow-sm);
+  /* 30px rather than 26px on the sides, so the 42px arrow that overhangs the
+     track edge stops short of the first character of text. */
+  padding: 26px 30px; box-shadow: var(--shadow-sm);
   display: flex; flex-direction: column; gap: 16px;
 }
+.tst-navs {
+  /* inset extends 14px past the track on both sides. Between that and the
+     card's 30px padding, the 42px arrows sit entirely in dead space instead
+     of covering the first and last characters of a review. */
+  position: absolute; inset: 0 -14px;
+  padding-bottom: 26px; /* cancels the track's shadow room so the arrows centre on the cards */
+  display: flex; align-items: center; justify-content: space-between;
+  pointer-events: none;
+}
+.tst-nav {
+  pointer-events: auto;
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  color: var(--heading);
+  background: rgba(11, 10, 8, .8);
+  border: 1px solid rgba(217, 180, 90, .34);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .9);
+  transition: background .18s ease, border-color .18s ease;
+}
+.tst-nav:hover { background: rgba(217, 180, 90, .2); border-color: var(--primary); }
+.tst-nav:active { background: rgba(217, 180, 90, .32); }
 .tst-stars { color: #F5A623; font-size: 16px; letter-spacing: 2px; }
 .tst-card blockquote { color: #C9C0AD; font-size: 15px; line-height: 1.7; flex: 1; }
 .tst-person { display: flex; align-items: center; gap: 12px; }
 .tst-avatar {
   width: 46px; height: 46px; border-radius: 50%;
-  background: var(--grad); color: #fff;
+  /* Was #fff on the gold gradient, roughly 2:1. Dark ink matches every other
+     gold surface on the site. */
+  background: var(--grad); color: #241503;
   font-weight: 700; font-size: 16px; display: grid; place-items: center; flex: 0 0 auto;
   box-shadow: 0 6px 14px -4px rgba(217, 180, 90, .45);
 }
@@ -937,7 +1008,10 @@ body.menu-open { overflow: hidden; }
 
 .ct-form { display: grid; gap: 16px; }
 .ct-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.ct-field { display: grid; gap: 7px; }
+/* minmax(0, 1fr) for the same reason as .field: an auto track would size to
+   the phone field's max-content and push the row past its column. */
+.ct-field { display: grid; grid-template-columns: minmax(0, 1fr); gap: 7px; }
+.ct-row-contact { grid-template-columns: 1fr 1.16fr; }
 /* Was var(--primary-darker) #8A6B2F, which is 3.98:1 on the dark card and
    failed AA. Matches the homepage form's label colour so the two forms read
    the same. */
@@ -961,7 +1035,7 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 640px) {
   .ct-hero { padding: 48px 0 40px; }
   .ct-main { padding: 48px 0; }
-  .ct-row { grid-template-columns: 1fr; }
+  .ct-row, .ct-row-contact { grid-template-columns: 1fr; }
   .ct-form-card { padding: 22px 18px; }
 }
 
@@ -1129,7 +1203,7 @@ body.menu-open { overflow: hidden; }
   .hero-inner { grid-template-columns: 1fr; padding-top: 44px; }
   .form-wrap { justify-self: center; max-width: 520px; width: 100%; }
   .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps, .prio-grid, .feat-grid, .tst-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps, .prio-grid, .feat-grid { grid-template-columns: repeat(2, 1fr); }
   .how-strip { grid-template-columns: repeat(2, 1fr); }
   .exp-row { grid-template-columns: 1fr; gap: 34px; }
   .exp-sec .exp-row { grid-template-columns: 1fr; gap: 34px; }
@@ -1143,7 +1217,7 @@ body.menu-open { overflow: hidden; }
 }
 @media (max-width: 640px) {
   .section { padding: 56px 0; }
-  .metrics-grid, .steps, .prio-grid, .feat-grid, .tst-grid, .caps-grid { grid-template-columns: 1fr; }
+  .metrics-grid, .steps, .prio-grid, .feat-grid, .caps-grid { grid-template-columns: 1fr; }
   .how-strip { grid-template-columns: 1fr; }
   .chip b, .chip span { font-size: 10px; letter-spacing: .05em; }
   .chip-1 { left: -8px; top: -22px; }
@@ -1171,7 +1245,10 @@ body.menu-open { overflow: hidden; }
    fields and allowing the grid/flex items to shrink below their content lets
    the card fit the container. */
 @media (max-width: 400px) {
-  .field-row { grid-template-columns: 1fr; }
+  /* The contact variant is repeated here because .field-row-contact carries a
+     second class and would otherwise outrank a bare .field-row and keep the
+     pair side by side on a phone. */
+  .field-row, .field-row-contact { grid-template-columns: 1fr; }
   .form-wrap, .field-row > *, .pn-wrap { min-width: 0; }
 }
 
@@ -1363,10 +1440,18 @@ body.menu-open { overflow: hidden; }
 .cap-v { font-size: 15.5px; font-weight: 700; color: var(--ink); }
 
 /* ---------- Testimonials (featured + two) ---------- */
-.tst-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.tst-featured { grid-column: 1 / -1; }
-.tst-featured blockquote { font-size: 17.5px; }
-.tst-featured .tst-avatar { width: 54px; height: 54px; font-size: 18px; }
+/* Slider sizing, widening the cards as the viewport narrows so a sliver of
+   the next one always stays in view as a hint that the row scrolls. */
+@media (max-width: 900px) {
+  .tst-card { flex-basis: calc((100% - 22px) / 1.3); }
+  /* The overhang runs out of page margin at this width and the arrows start
+     landing on card text, so they drop below the track and centre instead. */
+  .tst-track { padding-bottom: 8px; margin-bottom: 0; }
+  .tst-navs { position: static; inset: auto; padding-bottom: 0; justify-content: center; gap: 14px; margin-top: 6px; }
+}
+@media (max-width: 640px) {
+  .tst-card { flex-basis: 88%; }
+}
 
 /* ---------- Portfolio panel ---------- */
 .portfolio-visual { width: 100%; }
@@ -1395,7 +1480,6 @@ body.menu-open { overflow: hidden; }
   .metrics-band { grid-template-columns: repeat(2, 1fr); }
   .metric-cell:nth-child(3) { border-left: none; }
   .metric-cell:nth-child(n+3) { border-top: 1px solid var(--line); }
-  .tst-grid { grid-template-columns: 1fr; }
   .caps-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
@@ -1493,4 +1577,47 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 720px) {
   .photo-band { height: auto; padding: 52px 0; }
   .photo-band-img { position: absolute; }
+}
+
+/* ---------- Body copy ---------- */
+/* Paragraphs and lists run in --body (#c1bfba, 10.8:1 on the page background,
+AAA) instead of --muted, which now stays with labels, captions and meta text.
+
+   Two reasons for the split. The copy is easier to read at length, and it
+   keeps a clear gap between body text and the smaller grey labels, so the two
+   do not flatten into the same level.
+
+   Declared here in one block rather than edited into each rule, and scoped
+   rather than applied to every <p>, because the two gold panels (.cta-banner
+   and .faq-support) set their own dark paragraph colour and this one would be
+   1.08:1 on gold. This block sits last in the file so it wins on source order
+   at equal specificity. */
+.lead,
+.step p,
+.exp-copy p,
+.feat-card p,
+.faq-a p,
+.prec-copy p,
+.prio-card .prio-sub,
+.ct-hero .lead,
+.ct-info .lead,
+.ct-success p,
+.nf .lead,
+.ty-step p,
+.terms-hero .lead,
+.terms-block-body p,
+.blog-hero .lead,
+.blog-section p,
+.blog-cta p,
+.about-mission-item p,
+.about-pillar p, .about-sec-card p,
+.about-story-copy p,
+.tst-card blockquote,
+.photo-band-text,
+.hero-checks li,
+.exp-list li,
+.prio-list li,
+.terms-list li,
+.blog-article li {
+  color: var(--body);
 }

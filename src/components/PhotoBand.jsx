@@ -1,4 +1,3 @@
-import marketCandles from '../assets/photos/market-candles.jpg'
 import marketLines from '../assets/photos/market-lines.jpg'
 import multiScreen from '../assets/photos/multi-screen.jpg'
 import chartMonitors from '../assets/photos/chart-monitors.jpg'
@@ -25,11 +24,6 @@ import chartMonitors from '../assets/photos/chart-monitors.jpg'
 // Source: Pexels, free to use commercially under the Pexels license.
 
 const PHOTOS = {
-  market: {
-    src: marketCandles,
-    alt: 'A candlestick chart on a dark trading screen, with a price grid behind the candles',
-    pos: 'center 45%',
-  },
   // Deliberately a chart without legible figures. The first choice here was a
   // photo of a stock ticker board, and the company names and prices on it were
   // sharp enough to be read, which reads as market data this site is offering.
@@ -50,7 +44,7 @@ const PHOTOS = {
   },
 }
 
-export default function PhotoBand({ photo = 'market', kicker, title, text, height }) {
+export default function PhotoBand({ photo = 'lines', kicker, title, text, height }) {
   const p = PHOTOS[photo]
   if (!p) return null
 

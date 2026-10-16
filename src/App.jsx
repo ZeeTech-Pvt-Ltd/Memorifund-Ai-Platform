@@ -194,12 +194,6 @@ export default function App() {
     <Layout routeName="home">
       <Hero />
       <Metrics />
-      <PhotoBand
-        photo="market"
-        kicker="Always On"
-        title="Markets Do Not Wait For You To Be Awake"
-        text="Prices move through the night and across every timezone. The platform keeps watching while you're away, so you can catch up when it suits you instead of sitting at a screen."
-      />
       <Experience />
       <Priorities />
       <Features />

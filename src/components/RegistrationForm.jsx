@@ -173,26 +173,28 @@ export default function RegistrationForm() {
         {renderField('last_name')}
       </div>
 
-      {renderField('email')}
+      <div className="field-row field-row-contact">
+        {renderField('email')}
 
-      <div className={`field ${errors.phone ? 'error' : ''}`}>
-        <label htmlFor="phone">Phone</label>
-        <PhoneNumberInput
-          country={country}
-          onCountryChange={setCountry}
-          value={phone}
-          onValueChange={(v) => {
-            setPhone(v)
-            clearError('phone')
-          }}
-          onBlur={handleBlur}
-          invalid={errors.phone}
-          placeholder={phonePlaceholder}
-          id="phone"
-          name="phone"
-          autoComplete="tel"
-        />
-        <p className="error-msg">{fields.phone.error}</p>
+        <div className={`field ${errors.phone ? 'error' : ''}`}>
+          <label htmlFor="phone">Phone</label>
+          <PhoneNumberInput
+            country={country}
+            onCountryChange={setCountry}
+            value={phone}
+            onValueChange={(v) => {
+              setPhone(v)
+              clearError('phone')
+            }}
+            onBlur={handleBlur}
+            invalid={errors.phone}
+            placeholder={phonePlaceholder}
+            id="phone"
+            name="phone"
+            autoComplete="tel"
+          />
+          <p className="error-msg">{fields.phone.error}</p>
+        </div>
       </div>
 
       <button className="btn btn-primary btn-block" type="submit" disabled={processing}>
