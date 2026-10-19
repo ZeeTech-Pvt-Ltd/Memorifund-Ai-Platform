@@ -1,10 +1,12 @@
+'use client'
+
 import { useEffect, useRef, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { ArrowRight } from './icons.jsx'
 import { Visa, Mastercard, PayPal, GooglePay, BankTransfer } from './PayLogos.jsx'
 import PhoneNumberInput from './PhoneNumberInput.jsx'
 import { countries } from '../data/countries.js'
 import { submitLead } from '../lib/submitLead.js'
-import { navigateTo } from '../lib/navigate.js'
 
 // Validation rules, kept identical to the reference site
 const nameRe = /^(?!.*(?:tg|telegram|traffic|bot))[^@\d]{2,20}$/i
@@ -43,6 +45,7 @@ const phoneExamples = {
 }
 
 export default function RegistrationForm() {
+  const router = useRouter()
   const [errors, setErrors] = useState({})
   const [message, setMessage] = useState({ kind: '', text: '' })
   const [processing, setProcessing] = useState(false)
@@ -128,7 +131,7 @@ export default function RegistrationForm() {
         phone: fullPhone,
       })
       if (res?.status === 'success') {
-        navigateTo('/thank-you')
+        router.push('/thank-you')
       } else {
         setMessage({ kind: 'err', text: res?.message || 'Something went wrong. Please try again.' })
       }

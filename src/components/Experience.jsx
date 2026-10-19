@@ -70,7 +70,7 @@ export default function Experience() {
                 {shot && (
                   <figure className="exp-shot">
                     <img
-                      src={shot.src}
+                      src={shot.src.src}
                       alt={shot.alt}
                       width={shot.w}
                       height={shot.h}

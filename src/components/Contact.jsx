@@ -1,9 +1,11 @@
+'use client'
+
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import CtaBanner from './CtaBanner.jsx'
 import PhoneNumberInput from './PhoneNumberInput.jsx'
 import { ArrowRight, Icon } from './icons.jsx'
 import { submitLead } from '../lib/submitLead.js'
-import { navigateTo } from '../lib/navigate.js'
 import { countries } from '../data/countries.js'
 
 // Layout and components follow the site's own design system; copy is
@@ -16,6 +18,7 @@ const info = [
 ]
 
 export default function Contact() {
+  const router = useRouter()
   const [status, setStatus] = useState('idle') // idle | sending | err
   const [errMsg, setErrMsg] = useState('')
   const [phone, setPhone] = useState('')
@@ -39,7 +42,7 @@ export default function Contact() {
       if (digits.startsWith('0')) digits = digits.slice(1)
       const fullPhone = digits.startsWith(String(dial)) ? digits : `${dial}${digits}`
       const res = await submitLead({ firstName, lastName, email, phone: fullPhone })
-      if (res?.status === 'success') navigateTo('/thank-you')
+      if (res?.status === 'success') router.push('/thank-you')
       else {
         setStatus('err')
         setErrMsg(res?.message || 'Something went wrong. Please try again.')

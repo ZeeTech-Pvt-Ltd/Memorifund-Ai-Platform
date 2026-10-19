@@ -7,7 +7,7 @@
 // =========================================================
 import { faq, faqPage } from './content.js'
 
-const SITE = 'https://memorifund-ai-platform.com'
+export const SITE = 'https://memorifund-ai-platform.com'
 export const OG_IMAGE = `${SITE}/og-image.png`
 
 // ---------- JSON-LD builders (real site content only) ----------

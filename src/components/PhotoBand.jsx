@@ -46,7 +46,7 @@ export default function PhotoBand({ photo = 'lines', kicker, title, text, height
     <section className="photo-band" style={height ? { '--band-h': `${height}px` } : undefined}>
       <img
         className="photo-band-img"
-        src={p.src}
+        src={p.src.src}
         alt={p.alt}
         width="1400"
         height="933"
