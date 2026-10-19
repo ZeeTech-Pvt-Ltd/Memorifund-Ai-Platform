@@ -920,8 +920,6 @@ body.menu-open { overflow: hidden; }
 
 .about-section { padding: 72px 0; }
 .about-section.alt { background: var(--primary-lightest); }
-/* Our Story, extra breathing room above & below the story rows */
-.about-section.about-story-sec { padding: 92px 0; }
 
 .about-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .about-pillar, .about-sec-card {
@@ -950,30 +948,6 @@ body.menu-open { overflow: hidden; }
 }
 .about-mission-item h3 { font-size: 17px; margin-bottom: 6px; }
 .about-mission-item p { color: var(--muted); font-size: 14.5px; }
-
-.about-story { display: grid; gap: 48px; max-width: 980px; margin-inline: auto; }
-.about-story-row { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; }
-.about-story-row.reverse .about-story-media { order: 2; }
-/* About story imagery, brand visuals shown at their natural size so the
-   uploaded artwork is never cropped. If an image is ever missing, the large
-   step number still shows as a graceful branded placeholder. */
-.about-story-media {
-  position: relative; border-radius: 20px; overflow: hidden;
-  background: radial-gradient(30rem 22rem at 72% 0%, rgba(240, 208, 128, .10), transparent 60%), linear-gradient(180deg, var(--primary-lightest), var(--white));
-  box-shadow: var(--shadow-md); line-height: 0; min-height: 240px;
-}
-.about-story-media img { display: block; width: 100%; height: auto; }
-.about-story-media .about-story-fallback {
-  position: absolute; inset: 0; display: grid; place-items: center;
-  font-size: 76px; font-weight: 800; letter-spacing: .02em; color: rgba(217, 180, 90, .13);
-}
-.about-story-copy { display: grid; gap: 10px; justify-items: start; }
-.about-story-step {
-  font-size: 13px; font-weight: 800; letter-spacing: .12em; color: var(--primary-dark);
-  background: var(--card); border: 1px solid rgba(217, 180, 90, .18); padding: 6px 12px; border-radius: 999px;
-}
-.about-story-copy h3 { font-size: 22px; }
-.about-story-copy p { color: var(--muted); font-size: 15px; }
 
 .about-badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .about-badges span {
@@ -1231,8 +1205,6 @@ body.menu-open { overflow: hidden; }
   .about-stats { padding: 0 0 56px; }
   .about-section { padding: 56px 0; }
   .about-stats-grid, .about-mission, .about-pillars, .about-security { grid-template-columns: 1fr; }
-  .about-story-row { grid-template-columns: 1fr; gap: 18px; }
-  .about-story-row.reverse .about-story-media { order: 0; }
   .about-chip { font-size: 12px; padding: 7px 12px 7px 8px; }
   .about-chip .ico { width: 26px; height: 26px; }
   .about-chip.one { top: 10px; left: 8px; }
@@ -1531,18 +1503,6 @@ body.menu-open { overflow: hidden; }
 .about-visual .tv-coin { color: #241503; }
 .blog-article ol > li::before { color: #241503; }
 
-/* About story — trading chart visuals (replaces old photos) */
-.about-story-media { line-height: 1.5; }
-.story-chart {
-  min-height: 240px;
-  display: flex; flex-direction: column; justify-content: center; gap: 14px;
-  background: var(--card); border: 1px solid var(--card-border); border-radius: 20px;
-  padding: 18px 20px 20px;
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-}
-.story-chart-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.story-chart-meta > span:first-child { font-size: 13px; font-weight: 700; color: var(--ink); }
-.story-step-badge { font-size: 11.5px; font-weight: 800; color: #241503; background: var(--grad); padding: 4px 11px; border-radius: 999px; }
 
 /* ---------- Photo band ---------- */
 /* Full bleed photographic break between sections. The photo is the backdrop,
@@ -1629,7 +1589,6 @@ AAA) instead of --muted, which now stays with labels, captions and meta text.
 .blog-cta p,
 .about-mission-item p,
 .about-pillar p, .about-sec-card p,
-.about-story-copy p,
 .tst-card blockquote,
 .photo-band-text,
 .hero-checks li,

@@ -2,6 +2,7 @@ import { experience } from '../data/content.js'
 import { CandleChart, AreaChart } from './ChartVisuals.jsx'
 import chartAnalysisShot from '../assets/shots/chart-analysis.webp'
 import paperTradingShot from '../assets/shots/paper-trading.webp'
+import strategyBuilderShot from '../assets/shots/strategy-builder.webp'
 
 // Per-row visual. Rows carrying a `shot` render the supplied artwork; the rest
 // fall back to the inline SVG chart card.
@@ -27,7 +28,14 @@ const visualMeta = [
       alt: 'A practice trading screen showing a virtual balance, an order ticket and a list of assets',
     },
   },
-  { kind: 'candles', label: 'Custom strategy', note: '3 conditions active' },
+  {
+    shot: {
+      src: strategyBuilderShot,
+      w: 1100,
+      h: 733,
+      alt: 'A strategy builder screen with a market analysis menu, a price chart, a performance panel and a list of trading signals',
+    },
+  },
   { kind: 'area', label: 'Risk limits', note: 'Stop set at −3.5%' },
 ]
 

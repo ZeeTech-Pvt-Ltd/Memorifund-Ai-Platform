@@ -1,5 +1,4 @@
 import marketLines from '../assets/photos/market-lines.jpg'
-import multiScreen from '../assets/photos/multi-screen.jpg'
 import chartMonitors from '../assets/photos/chart-monitors.jpg'
 
 // A wide photographic break between sections.
@@ -30,11 +29,6 @@ const PHOTOS = {
   lines: {
     src: marketLines,
     alt: 'Price lines crossing a dark chart screen, with the trend running diagonally',
-    pos: 'center 50%',
-  },
-  screens: {
-    src: multiScreen,
-    alt: 'Several monitors in a dim room, each showing a financial chart',
     pos: 'center 50%',
   },
   charts: {

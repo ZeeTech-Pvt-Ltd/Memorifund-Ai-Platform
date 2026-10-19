@@ -1,7 +1,5 @@
 import CtaBanner from './CtaBanner.jsx'
-import PhotoBand from './PhotoBand.jsx'
 import TradingVisual from './TradingVisual.jsx'
-import { CandleChart, AreaChart } from './ChartVisuals.jsx'
 import { Check, ArrowRight, Icon } from './icons.jsx'
 
 const stats = [
@@ -48,43 +46,6 @@ const mission = [
     title: 'Responsible',
     text: 'Safety comes first. Trading risks are explained in plain language, and sensible, measured trading is encouraged at every turn.',
   },
-]
-
-const story = [
-  {
-    step: '01',
-    title: 'The Beginning',
-    text: 'Memorifund Ai Platform began with six specialists in fintech and algorithmic trading who shared one goal, to make automated trading as simple and dependable as everyday online banking.',
-  },
-  {
-    step: '02',
-    title: 'First Launch',
-    text: 'The platform launched with 12 cryptocurrencies, and more than 10,000 traders joined in the very first month. A clean, uncluttered interface paired with hands-free automation was what set it apart from day one.',
-  },
-  {
-    step: '03',
-    title: 'Growing the Community',
-    text: 'Within its first year, Memorifund Ai Platform passed 500,000 users. More currencies were added, alongside round-the-clock customer support in several languages.',
-  },
-  {
-    step: '04',
-    title: 'Reaching New Markets',
-    text: 'As demand grew, Memorifund Ai Platform expanded into many new markets, adding local payment options and switching on two-factor authentication for every account along the way.',
-  },
-  {
-    step: '05',
-    title: 'Today',
-    text: 'Now serving 4M+ registered users across 65+ currencies, Memorifund Ai Platform keeps growing every day, with the original mission unchanged: make automated trading accessible to everyone.',
-  },
-]
-
-// Trading chart visuals replacing the old story photos, one per milestone.
-const storyVisuals = [
-  { kind: 'area', label: 'Early signal · inception' },
-  { kind: 'candles', label: '12 pairs · first launch' },
-  { kind: 'area', label: '500K users · growth' },
-  { kind: 'candles', label: 'Global markets · expansion' },
-  { kind: 'area', label: '4M+ traders · today' },
 ]
 
 const badges = ['SSL Certified', 'GDPR Compliant', '256-bit Encryption', 'Available in 98+ Countries', 'Regular Security Audits']
@@ -167,13 +128,6 @@ export default function About() {
         </div>
       </section>
 
-      <PhotoBand
-        photo="screens"
-        kicker="How We Build"
-        title="Simple On The Surface, Careful Underneath"
-        text="Every screen is built so a first trade makes sense. The complexity sits in the engine, where you don't have to look at it."
-      />
-
       {/* Mission */}
       <section className="section about-section alt">
         <div className="container">
@@ -191,39 +145,6 @@ export default function About() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Story */}
-      <section className="section about-section about-story-sec">
-        <div className="container">
-          <div className="section-head reveal">
-            <h2 className="h2">From a simple idea to a platform trusted by millions</h2>
-          </div>
-
-          <div className="about-story">
-            {story.map((s, i) => {
-              const meta = storyVisuals[i] || storyVisuals[0]
-              return (
-                <div className={`about-story-row ${i % 2 ? 'reverse' : ''} reveal`} key={s.step}>
-                  <div className="about-story-media">
-                    <div className="story-chart">
-                      <div className="story-chart-meta">
-                        <span>{meta.label}</span>
-                        <span className="story-step-badge">{s.step}</span>
-                      </div>
-                      {meta.kind === 'candles' ? <CandleChart height={200} /> : <AreaChart height={200} />}
-                    </div>
-                  </div>
-                  <div className="about-story-copy">
-                    <span className="about-story-step">{s.step}</span>
-                    <h3>{s.title}</h3>
-                    <p>{s.text}</p>
-                  </div>
-                </div>
-              )
-            })}
           </div>
         </div>
       </section>
