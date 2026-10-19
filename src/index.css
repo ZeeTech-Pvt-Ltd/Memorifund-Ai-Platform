@@ -1316,16 +1316,16 @@ body.menu-open { overflow: hidden; }
   padding: 13px 20px; border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.02);
 }
-.dash-brand, .visual-brand {
+.dash-brand {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12.5px; font-weight: 700; color: var(--ink); letter-spacing: .02em;
 }
-.dash-brand-dot, .visual-brand-dot { width: 9px; height: 9px; border-radius: 3px; background: var(--grad); }
-.dash-live, .visual-live {
+.dash-brand-dot { width: 9px; height: 9px; border-radius: 3px; background: var(--grad); }
+.dash-live {
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 12px; font-weight: 700; color: var(--green);
 }
-.dash-live .dot, .visual-live .dot {
+.dash-live .dot {
   width: 7px; height: 7px; border-radius: 50%; background: var(--green);
   box-shadow: 0 0 0 3px rgba(217, 180, 90, .2); animation: pulse 1.6s infinite;
 }
@@ -1440,8 +1440,6 @@ body.menu-open { overflow: hidden; }
 .portfolio-panel .dash-bal { font-size: 26px; }
 
 /* ---------- Experience visual cards ---------- */
-/* Supplied artwork in place of the SVG chart card. Same frame as .visual-card
-   so the two kinds of visual sit at the same weight in the row. */
 .exp-shot {
   margin: 0; width: 100%; max-width: 520px; margin-inline: auto;
   padding: 30px 0;
@@ -1449,19 +1447,6 @@ body.menu-open { overflow: hidden; }
   box-shadow: var(--shadow-md); overflow: hidden;
 }
 .exp-shot img { display: block; width: 100%; height: auto; }
-.exp-visual .visual-card {
-  background: var(--card); border: 1px solid var(--card-border); border-radius: var(--r-lg);
-  box-shadow: var(--shadow-md); overflow: hidden; width: 100%; max-width: 520px; margin-inline: auto;
-  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-}
-.visual-card-head {
-  display: flex; align-items: center; justify-content: space-between; gap: 10px;
-  padding: 13px 20px; border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, 0.02);
-}
-.visual-card-body { padding: 20px 22px 22px; }
-.visual-meta { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-.visual-meta span { font-size: 15px; font-weight: 700; }
-.visual-meta .visual-note { font-size: 12.5px; color: var(--muted); font-weight: 600; }
 
 /* ---------- Responsive (redesign) ---------- */
 @media (max-width: 1024px) {
