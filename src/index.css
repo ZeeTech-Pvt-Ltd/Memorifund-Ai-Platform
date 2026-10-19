@@ -1305,7 +1305,7 @@ body.menu-open { overflow: hidden; }
 .hero-visual .form-wrap { max-width: none; justify-self: stretch; width: 100%; }
 
 /* ---------- Trading dashboard panel ---------- */
-.dash-panel, .portfolio-panel {
+.portfolio-panel {
   background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: var(--r-lg);
@@ -1346,7 +1346,6 @@ body.menu-open { overflow: hidden; }
 }
 .dash-stats span { font-size: 12px; color: var(--muted); font-weight: 500; }
 .dash-stats b { color: var(--ink); font-weight: 700; }
-.dash-candles { margin-top: 16px; }
 
 /* ---------- Metrics band ---------- */
 .metrics-band {
