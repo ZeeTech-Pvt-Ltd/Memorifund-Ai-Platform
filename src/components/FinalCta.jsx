@@ -3,9 +3,9 @@ import CtaBanner from './CtaBanner.jsx'
 export default function FinalCta() {
   return (
     <CtaBanner
-      title="Is Closer Than You Think"
-      text="Register in about two minutes and let the AI take it from there. Availability is currently limited to verified residents of Australia."
-      cta="Sign Up Now"
+      title="Ready To Make Your First Smart Trade?"
+      text="Join Memorifund Ai Platform today and start trading with clear signals and full control. It takes 2 minutes, and joining is free."
+      cta="Create Free Account"
     />
   )
 }

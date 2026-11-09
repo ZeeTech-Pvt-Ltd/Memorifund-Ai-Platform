@@ -13,13 +13,14 @@ export const nav = [
 
 export const hero = {
   eyebrow: '🇦🇺 Chosen by traders across Australia',
-  title: 'Memorifund Ai Platform',
-  titleMark: 'Automated Trading Platform',
-  lead: 'Memorifund Ai Platform brings market tools, account management and automated trading features together in one place. Follow market activity, manage your account and make informed decisions with a platform designed to be simple to use.',
+  title: 'Trade With Confidence,',
+  titleMark: 'Even If You’re Just Starting',
+  lead: 'Get clear market signals, simple explanations and full control over your money. Memorifund Ai Platform helps you trade with a plan, not a guess.',
   checks: [
-    'AI trading strategies that run for you around the clock',
-    'Live market tracking with instant alerts, day and night',
-    'Secure, transparent, and suited to every experience level',
+    'Crypto, forex, stocks and gold in one account',
+    'Every signal comes with a simple "why"',
+    'Use it on your phone or computer',
+    'Set your own risk limits',
   ],
   stats: [
     { value: '4M+', label: 'Verified users' },
@@ -39,32 +40,39 @@ export const steps = [
   {
     no: 'STEP 1',
     icon: 'user',
-    title: 'Create Your Account',
-    text: 'Signing up only takes a few minutes. Enter your first and last name, email, and phone number, and your account is ready, protected by two-factor authentication from the very start.',
-    cta: 'Start now',
+    title: 'Sign up',
+    text: 'Enter your name, email and phone number.',
+    cta: 'Get Started Now',
   },
   {
     no: 'STEP 2',
-    icon: 'wallet',
-    title: 'Deposit Funds',
-    text: 'Begin with as little as AU$250. Pay by credit or debit card, direct bank transfer, or a popular e-wallet, and funds typically reach your account within minutes, no waiting around, no surprise charges.',
-    cta: 'Deposit now',
-    green: true,
+    icon: 'shield',
+    title: 'Verify',
+    text: 'Upload your ID so your account stays protected.',
+    cta: 'Get Started Now',
   },
   {
     no: 'STEP 3',
+    icon: 'wallet',
+    title: 'Deposit',
+    text: 'Add money using a payment method you like.',
+    cta: 'Get Started Now',
+    green: true,
+  },
+  {
+    no: 'STEP 4',
     icon: 'chart',
-    title: 'Start Trading',
-    text: 'Let the automation trade hands-free, or steer the markets yourself, it is your call. When auto mode is on, Memorifund Ai Platform watches prices 24/7, places trades on your behalf, and keeps your balance current in real time.',
-    cta: 'Get started',
+    title: 'Start trading',
+    text: 'Choose your markets, set your limits and check your first signals.',
+    cta: 'Get Started Now',
   },
 ]
 
 export const trustStrip = [
-  'Zero hidden fees',
-  'Withdraw whenever you like',
-  'No monthly subscriptions',
-  'Leave when you want',
+  'Strong encryption: Your personal details are locked and protected',
+  'Two-step login: Only you can get into your account',
+  'Clear fees: Every cost is shown upfront. No surprises',
+  'Full control: No trade happens without your approval',
 ]
 
 export const experience = {
@@ -144,56 +152,56 @@ export const priorities = {
 
 export const features = [
   {
-    icon: 'bot', title: 'Automated Trading, Your Way',
-    text: 'Let the automation take care of the busywork, or fine-tune the settings to suit your style. You stay in charge while the platform does the heavy lifting.',
+    icon: 'bot', title: 'Easy to understand',
+    text: 'No hard words. We explain every idea like a friend would.',
   },
   {
-    icon: 'clock', title: 'Market Intelligence in Real Time', green: true,
-    text: 'Follow global markets without going it alone. Memorifund Ai Platform delivers sharp execution and live signals around the clock.',
+    icon: 'clock', title: 'Saves your time',
+    text: 'We study the charts, so you don\'t have to spend hours.',
   },
   {
-    icon: 'shield', title: 'Serious Security, Total Peace of Mind',
-    text: 'Industry-standard encryption and multi-factor authentication help keep every Memorifund Ai Platform account across Australia protected.',
+    icon: 'zap', title: 'Fast alerts', green: true,
+    text: 'Know about big price moves the moment they happen.',
+  },
+  {
+    icon: 'shield', title: 'Real help',
+    text: 'Our support team answers your questions by chat and email.',
   },
 ]
 
 export const precision = [
   {
-    icon: 'lock', title: 'Smart Algorithms for Smarter Trading',
-    text: 'Advanced AI scans live market data and highlights emerging trends on your behalf, across Bitcoin, Ethereum, stocks, and forex.',
+    icon: 'gauge', title: 'Clear signals',
+    text: 'Know what to watch and why it matters.',
   },
   {
-    icon: 'zap', title: 'Fast Execution, Precise Timing', green: true,
-    text: 'The Memorifund Ai Platform engine reads pricing, liquidity shifts, and volatility, then executes trades automatically at exactly the right moment.',
+    icon: 'lock', title: 'Stop-loss and take-profit',
+    text: 'Set where to exit before you enter a trade.',
   },
   {
-    icon: 'gauge', title: 'Insights You Can Act On',
-    text: 'Automation is only half the story. Real-time analytics and performance tools keep you fully informed at every turn.',
+    icon: 'zap', title: 'Price alerts', green: true,
+    text: 'Get a ping when a price hits your target.',
+  },
+  {
+    icon: 'chart', title: 'Easy dashboard',
+    text: 'See your balance, trades and results at a glance.',
+  },
+  {
+    icon: 'user', title: 'Works everywhere',
+    text: 'Trade from your phone, tablet or laptop.',
   },
 ]
 
+// The brief says to keep this section hidden until there are three real
+// reviews to show. Nothing invented ships in its place, so the list is empty
+// and <Testimonials/> renders nothing until real reviews are added here.
 export const testimonials = {
   eyebrow: 'Community',
   title: 'Reviews From ',
   titleMark: 'Our Community',
   lead: 'Real experiences, straight from verified users.',
-  items: [
-    {
-      quote: "Using Memorifund Ai Platform has been a pleasure from day one. The automation responds quickly, and the dashboard makes it easy to follow everything as it happens.",
-      name: 'Liam Whitford', initials: 'LW', verified: 'Verified user',
-    },
-    {
-      quote: 'I had zero trading background before signing up. The setup was painless, each step was explained clearly, and I never felt out of my depth.',
-      name: 'Megan Hartley', initials: 'MH', verified: 'Verified trade',
-    },
-    {
-      quote: "The speed caught my attention straight away, and taking money out has been hassle-free, every step is confirmed clearly before it processes.",
-      name: 'Callum Whitford', initials: 'CW', verified: 'Verified trade',
-    },
-  ],
-  summary: [
-    { big: '4.8', stars: '★★★★★', note: 'Based on 1,247 reviews' },
-  ],
+  items: [],
+  summary: [],
 }
 
 export const portfolio = {
@@ -214,87 +222,84 @@ export const portfolio = {
 // the page; the FAQPage schema strips the tokens before emitting JSON-LD.
 export const faqPage = [
   {
-    q: 'What does Memorifund Ai Platform actually do?',
-    a: 'Memorifund Ai Platform uses AI-driven data analysis to process large volumes of market and industry data, surfacing patterns and generating structured recommendations. Our platform is designed to support decision-making for professionals and investors, not to replace independent judgement or professional advice.',
+    q: 'What does Memorifund Ai Platform do?',
+    a: 'We study the markets and send you clear trade signals. You decide what to do with them.',
   },
   {
-    q: 'Is Memorifund Ai Platform a financial advisory service?',
-    a: 'No. Memorifund Ai Platform provides data-informed insights and analysis tools. Nothing produced by our platform constitutes personalised financial advice, a recommendation to buy or sell any asset, or a guarantee of any outcome. Users should consult a licensed advisor before making financial decisions.',
+    q: 'Do I need trading experience?',
+    a: 'No. Every signal is explained in simple words.',
   },
   {
-    q: 'How often are reports and recommendations updated?',
-    a: 'Our system processes incoming data continuously and compiles daily reports summarising activity, flagged scenarios, and any logged recommendations. Update frequency for specific data streams may vary depending on source availability.',
+    q: 'Does Memorifund Ai Platform trade for me?',
+    a: 'No. You stay in control of every trade.',
   },
   {
-    q: 'Who is Memorifund Ai Platform designed for?',
-    a: 'Memorifund Ai Platform is built for professionals and investors who want a structured, data-first view of market activity. It suits users who are comfortable reviewing analytical output and applying their own judgement rather than expecting turnkey instructions.',
+    q: 'What can I trade?',
+    a: 'Crypto, forex, stocks and commodities.',
   },
   {
-    q: 'Can I access historical reports and past recommendations?',
-    a: 'Recommendations and key outputs are logged so you can review how a given scenario was assessed over time. This is intended for transparency and review purposes, not as a promise of future performance.',
+    q: 'Is there an app to download?',
+    a: 'No download needed. It works in your browser.',
   },
   {
-    q: 'Does Memorifund Ai Platform guarantee accurate predictions?',
-    a: 'No. All analysis involves uncertainty, and past patterns do not guarantee future results. We do not make exaggerated claims about accuracy, and every output should be treated as one input among several in your own decision-making process.',
+    q: 'What is the minimum deposit?',
+    a: 'You can start with [Amount].',
   },
   {
-    q: 'How do I get started on the platform?',
-    a: 'You can get started using the [Sign Up form](/), available in the navigation menu or on the homepage. This will guide you through the next steps for onboarding.',
+    q: 'How long do withdrawals take?',
+    a: '[Add your withdrawal time here.]',
   },
   {
-    q: 'What kind of data does Memorifund Ai Platform analyse?',
-    a: 'Our systems are designed to ingest and process structured market and industry data relevant to the scenarios covered on our platform. Specific data sources and coverage may evolve as the platform develops.',
-  },
-  {
-    q: 'Is there a minimum commitment or contract length?',
-    a: 'Access terms are outlined during the onboarding process. For full details on entry requirements and terms of use, please refer to our [Terms of Use](/terms) or contact us directly.',
-  },
-  {
-    q: 'How is my information handled?',
-    a: 'We take data handling seriously and outline our practices in our [Privacy Policy](/privacy). We recommend reviewing that page for details on what information is collected and how it is used.',
-  },
-  {
-    q: 'What should I do if I have a question not covered here?',
-    a: '[Visit our Contact page](/contact) to reach our team directly. We aim to respond to enquiries about the platform, access, and general usage as promptly as possible.',
+    q: 'Can I lose money?',
+    a: 'Yes. All trading carries risk. Only trade money you can afford to lose.',
   },
 ]
 
 export const faq = [
   {
-    q: 'Is Memorifund Ai Platform Legit?',
-    a: 'Yes. Memorifund Ai Platform is an AI-driven automated trading platform with a community score of 4.8 out of 5 based on 1,247 independent reviews. Every trade, signal, and performance figure is visible in real time, and traders across Australia use the platform daily for fast execution.',
+    q: 'What does Memorifund Ai Platform do?',
+    a: 'We study the markets and send you clear trade signals. You decide what to do with them.',
   },
   {
-    q: 'How Much Do I Need to Start Trading on Memorifund Ai Platform?',
-    a: 'A minimum deposit of AU$250 is all it takes to activate your trading account, with no subscription fees, hidden charges, or registration costs. Start small and grow at a pace that feels right for you.',
+    q: 'Do I need trading experience?',
+    a: 'No. Every signal is explained in simple words.',
   },
   {
-    q: 'How Secure Are My Money and Data on Memorifund Ai Platform?',
-    a: 'Security runs through every layer of the platform. Your personal data is shielded by internationally recognised encryption and two-factor authentication, while 95% of client funds are kept in cold storage.',
+    q: 'Does Memorifund Ai Platform trade for me?',
+    a: 'No. You stay in control of every trade.',
   },
   {
-    q: 'What Payment Methods Can I Use to Withdraw?',
-    a: 'Withdrawals follow the same channels as your deposit, including major credit cards, bank transfers, and PayPal. Most requests are processed within 24 hours.',
+    q: 'What can I trade?',
+    a: 'Crypto, forex, stocks and commodities.',
   },
   {
-    q: 'How Does Memorifund Ai Platform Maintain Transparency?',
-    a: 'Openness is wired into the way the platform works. Every trade, signal, and balance change appears in your account in real time, supported by live reserve audits and upfront pricing.',
+    q: 'Is there an app to download?',
+    a: 'No download needed. It works in your browser.',
   },
   {
-    q: 'Why Are There So Many Copycat Versions of Your Platform Online?',
-    a: "Our platform's popularity has made it a target for bad actors who build lookalike (scam) sites to mislead visitors. Always double-check that you are on the official domain, memorifund-ai-platform.com.",
+    q: 'What is the minimum deposit?',
+    a: 'You can start with [Amount].',
+  },
+  {
+    q: 'How long do withdrawals take?',
+    a: '[Add your withdrawal time here.]',
+  },
+  {
+    q: 'Can I lose money?',
+    a: 'Yes. All trading carries risk. Only trade money you can afford to lose.',
   },
 ]
 
+// Markets (doc section 5) and Who It's For (doc section 7), which both fit the
+// key/value shape of this table.
 export const capabilities = [
-  { k: 'Platform Technology', v: 'AI-Powered Trading Technology' },
-  { k: 'Funding Methods', v: 'Credit Cards, Bank Transfers, PayPal' },
-  { k: 'Platform Access', v: 'Works Across All Devices' },
-  { k: 'Execution Performance', v: 'Fast Order Execution' },
-  { k: 'Trading Instruments', v: 'Equities, Forex, Crypto & More' },
-  { k: 'Account Setup', v: 'Simple and Fast Onboarding' },
-  { k: 'Customer Support', v: '24/7 Professional Assistance' },
-  { k: 'Minimum Deposit', v: 'AU$250 · No Hidden Costs' },
+  { k: 'Crypto', v: 'Trade popular coins like Bitcoin and Ethereum' },
+  { k: 'Forex', v: 'Trade world currencies like USD, EUR and GBP' },
+  { k: 'Stocks', v: 'Follow big companies from around the world' },
+  { k: 'Commodities', v: 'Trade gold, silver and oil' },
+  { k: 'First-time traders', v: 'Start with easy steps and plain explanations' },
+  { k: 'Working people', v: 'Check the market in a few minutes a day' },
+  { k: 'Experienced traders', v: 'Get extra signals and cover more markets' },
 ]
 
 export const footer = {

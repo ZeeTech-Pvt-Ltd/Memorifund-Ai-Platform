@@ -45,6 +45,14 @@ const Chevron = ({ back = false }) => (
 )
 
 export default function Testimonials() {
+  // Hidden until there are three real reviews, as the content brief asks.
+  // Checked before any hook runs, in its own component, so the rules of hooks
+  // are untouched.
+  if (testimonials.items.length < 3) return null
+  return <TestimonialsCarousel />
+}
+
+function TestimonialsCarousel() {
   const trackRef = useRef(null)
   const [paused, setPaused] = useState(false)
   const [reduceMotion, setReduceMotion] = useState(

@@ -409,7 +409,9 @@ body.menu-open { overflow: hidden; }
   -webkit-mask-image: radial-gradient(closest-side at 90% 10%, #000, transparent 70%);
   pointer-events: none;
 }
-.steps { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+/* auto-fit so the row stays even at four steps and folds down cleanly on
+   narrower screens, instead of leaving one card alone on a second row. */
+.steps { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
 .step {
   position: relative;
   background: var(--card); border: 1px solid var(--line);
@@ -580,7 +582,7 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- Features ---------- */
 .feat { position: relative; overflow: hidden; background: var(--primary-lightest); }
-.feat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.feat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
 .feat-card {
   background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg);
   padding: 28px 26px; box-shadow: var(--shadow-sm);

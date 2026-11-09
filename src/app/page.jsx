@@ -30,9 +30,9 @@ export default function HomePage() {
       <Precision />
 
       <CtaBanner
-        title="Built for Every Trader"
-        text="Memorifund Ai Platform is built by a team of innovators, analysts, and engineers committed to advancing the world of automated trading. Join thousands of verified traders across Australia today."
-        cta="Register Now"
+        title="Join Memorifund Ai Platform Today"
+        text="Clear signals, simple explanations and full control over your money. Start with a plan, not a guess."
+        cta="Create Free Account"
       />
 
       <Testimonials />

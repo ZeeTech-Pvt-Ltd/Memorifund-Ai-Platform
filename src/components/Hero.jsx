@@ -33,7 +33,7 @@ export default function Hero() {
 
           <div className="hero-cta">
             <a className="btn btn-primary" href="/contact">
-              Register Now <ArrowRight />
+              Create Free Account <ArrowRight />
             </a>
             <a className="btn btn-ghost" href="/how-it-works">How It Works</a>
           </div>

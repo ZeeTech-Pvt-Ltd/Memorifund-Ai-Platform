@@ -46,9 +46,9 @@ export default function FaqPage() {
             Frequently Asked <mark>Questions</mark>
           </h1>
           <p className="lead">
-            Answers to common questions about how Memorifund Ai Platform works, what to
-            expect from our reporting, and how to get started. If you don't find
-            what you're looking for, reach out via our contact page.
+            Answers to common questions about how Memorifund Ai Platform works, what you
+            can trade, and how to get started. If you don’t find what you’re looking
+            for, reach out via our contact page.
           </p>
         </div>
       </section>

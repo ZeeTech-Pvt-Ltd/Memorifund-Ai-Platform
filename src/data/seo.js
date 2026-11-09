@@ -232,14 +232,14 @@ export const seo = {
   faq: {
     title: 'Frequently Asked Questions, Memorifund Ai Platform',
     description:
-      'Memorifund Ai Platform questions, what the platform does, how reporting works, access requirements, data handling. Not covered? Contact us.',
+      'Memorifund Ai Platform questions, what the platform does, what you can trade, access requirements, data handling. Not covered? Contact us.',
     keywords: 'Memorifund Ai Platform FAQ, Memorifund Ai Platform questions, how does Memorifund Ai Platform work, Memorifund Ai Platform help, trading platform FAQ',
     canonical: `${SITE}/faq`,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
     type: 'website',
     ogImageAlt: 'Memorifund Ai Platform frequently asked questions',
     schema: [
-      webPage('Frequently Asked Questions', `${SITE}/faq`, 'Frequently asked questions about Memorifund Ai Platform, what the platform does, how reporting works, and how to get started.'),
+      webPage('Frequently Asked Questions', `${SITE}/faq`, 'Frequently asked questions about Memorifund Ai Platform, what the platform does, what you can trade, and how to get started.'),
       breadcrumb('FAQ', '/faq'),
       fullFaqSchema(),
     ],
