@@ -13,12 +13,12 @@ export default function BlogArticle() {
       <section className="blog-hero">
         <div className="container blog-hero-inner reveal">
           <h1 className="h1">
-            Memorifund Ai Platform Review Australia, <mark>Scam or Legit?</mark>
+            Memorifund Ai Platform Review, <mark>Scam or Legit?</mark>
           </h1>
           <p className="lead">
             A close look at Memorifund Ai Platform's features, benefits, and getting-started
             process, and a straight answer on whether the platform is a scam or a
-            legitimate way to trade Australia's markets.
+            legitimate way to trade the markets.
           </p>
           <div className="blog-meta">
             <span>Published: 26 August 2026</span>
@@ -45,7 +45,7 @@ export default function BlogArticle() {
             </p>
             <div className="blog-note">
               <b>The short answer:</b> No, Memorifund Ai Platform is not a scam. It is an
-              AI-driven automated trading platform used by traders across Australia,
+              AI-driven automated trading platform used by traders,
               with 95% of client funds held in cold storage, two-factor
               authentication, and transparent, real-time account records. The only
               real Memorifund Ai Platform lives at the official domain:{' '}
@@ -162,7 +162,7 @@ export default function BlogArticle() {
           {/* First CTA */}
           <div className="blog-cta reveal">
             <h3>Ready to put the platform to work?</h3>
-            <p>Join traders across Australia and let the AI scan the markets for you, around the clock.</p>
+            <p>Join traders and let the AI scan the markets for you, around the clock.</p>
             <a className="btn btn-primary" href={REGISTER_URL}>Create Your Trading Account Now</a>
             <a className="btn-link" href={REGISTER_URL}>Read More, Click Here</a>
           </div>

@@ -57,7 +57,7 @@ export default function RegistrationForm() {
 
   // Auto-detect the visitor's country from their IP and preselect the
   // matching dial code (e.g. a Pakistan IP selects +92). Tries a primary
-  // source then a fallback; defaults to Australia if both fail.
+  // source then a fallback; defaults to AU if both fail.
   useEffect(() => {
     let cancelled = false
     const apply = (code) => {

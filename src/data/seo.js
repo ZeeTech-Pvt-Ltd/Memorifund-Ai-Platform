@@ -20,10 +20,9 @@ const organization = {
   url: SITE,
   logo: `${SITE}/favicon.svg`,
   description:
-    'Memorifund Ai Platform is an AI-powered automated trading platform for users in Australia, automated strategies, live market signals, and dependable security in one place.',
+    'Memorifund Ai Platform is an AI-powered automated trading platform, automated strategies, live market signals, and dependable security in one place.',
   email: 'support@memorifund-ai-platform.com',
   inLanguage: 'en-AU',
-  areaServed: 'Australia',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Melbourne',
@@ -47,9 +46,8 @@ const organization = {
   },
 }
 
-// The platform described as a schema.org Service, geo-scoped to Australia.
-// all fields reflect claims already on the site (Melbourne base, 24/7
-// support, AU$250 minimum deposit), nothing invented.
+// The platform described as a schema.org Service.
+// All fields reflect claims already on the site, nothing invented.
 //
 // Declared as both Service and SoftwareApplication on purpose. Google's review
 // snippet supports aggregateRating on a fixed set of types and Service is not
@@ -69,10 +67,9 @@ function serviceSchema() {
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Web',
     description:
-      'AI-powered automated trading platform for users in Australia, automated strategies, live market signals, and dependable security in one place.',
+      'AI-powered automated trading platform, automated strategies, live market signals, and dependable security in one place.',
     provider: { '@id': `${SITE}/#organization` },
-    areaServed: 'Australia',
-    audience: { '@type': 'Audience', audienceType: 'Traders in Australia' },
+    audience: { '@type': 'Audience', audienceType: 'Traders' },
     offers: {
       '@type': 'Offer',
       description: 'Minimum deposit to activate a trading account',
@@ -154,26 +151,26 @@ function fullFaqSchema() {
 }
 
 const homeDescription =
-  'Memorifund Ai Platform, AI-powered automated trading for Australia. 24/7 automated strategies, live signals, bank-grade security. Start with just AU$250.'
+  'Memorifund Ai Platform, AI-powered automated trading. Clear signals, simple explanations and full control over your money.'
 
 export const seo = {
   home: {
-    title: 'Memorifund Ai Platform: AI-Powered Trading in Australia',
+    title: 'Memorifund Ai Platform: AI-Powered Trading',
     description: homeDescription,
     keywords:
-      'Memorifund Ai Platform, automated trading platform australia, AI trading platform, automated crypto trading, AI trading Australia',
+      'Memorifund Ai Platform, automated trading platform, AI trading platform, automated crypto trading, AI trading',
     canonical: `${SITE}/`,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
     type: 'website',
-    ogImageAlt: 'Memorifund Ai Platform, AI-powered automated trading platform for Australia',
-    schema: [organization, website, webPage('Memorifund Ai Platform: AI-Powered Trading in Australia', `${SITE}/`, homeDescription), faqPageSchema(), serviceSchema()],
+    ogImageAlt: 'Memorifund Ai Platform, AI-powered automated trading platform',
+    schema: [organization, website, webPage('Memorifund Ai Platform: AI-Powered Trading', `${SITE}/`, homeDescription), faqPageSchema(), serviceSchema()],
   },
 
   about: {
     title: 'About Memorifund Ai Platform, Automated Trading Platform',
     description:
-      'Learn about Memorifund Ai Platform, the AI trading platform trusted by 4M+ users, with automated analysis, bank-grade security, and 24/7 support.',
-    keywords: 'about Memorifund Ai Platform, Memorifund Ai Platform trading platform, automated trading platform australia, AI trading company',
+      'Learn about Memorifund Ai Platform, the AI trading platform with clear signals, simple explanations and dependable security.',
+    keywords: 'about Memorifund Ai Platform, Memorifund Ai Platform trading platform, automated trading platform, AI trading company',
     canonical: `${SITE}/about`,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
     type: 'website',
@@ -185,14 +182,14 @@ export const seo = {
   },
 
   contact: {
-    title: 'Contact Memorifund Ai Platform, 24/7 Support Australia',
+    title: 'Contact Memorifund Ai Platform, 24/7 Support',
     description:
       'Questions about Memorifund Ai Platform or automated trading? Contact our 24/7 team by email or the registration form, replies usually within a few hours.',
-    keywords: 'contact Memorifund Ai Platform, Memorifund Ai Platform support, automated trading help, automated trading Australia support',
+    keywords: 'contact Memorifund Ai Platform, Memorifund Ai Platform support, automated trading help, automated trading support',
     canonical: `${SITE}/contact`,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
     type: 'website',
-    ogImageAlt: 'Contact Memorifund Ai Platform support, 24/7 assistance for Australian traders',
+    ogImageAlt: 'Contact Memorifund Ai Platform support, 24/7 assistance',
     schema: [
       webPage('Contact Memorifund Ai Platform', `${SITE}/contact`, 'Contact the Memorifund Ai Platform support team, email and registration form, available around the clock.'),
       breadcrumb('Contact Us', '/contact'),
@@ -215,16 +212,16 @@ export const seo = {
   },
 
   'memorifund-ai-platform-review-australia-scam': {
-    title: 'Memorifund Ai Platform Review Australia: Scam or Legit?',
+    title: 'Memorifund Ai Platform Review: Scam or Legit?',
     description:
-      'Memorifund Ai Platform review Australia, is it a scam or legit? Features, benefits, how to get started, plus a straight answer for Australian traders.',
-    keywords: 'Memorifund Ai Platform review, is Memorifund Ai Platform legit, Memorifund Ai Platform scam, Memorifund Ai Platform Australia, automated trading platform review Australia',
+      'Memorifund Ai Platform review, is it a scam or legit? Features, benefits, how to get started, plus a straight answer.',
+    keywords: 'Memorifund Ai Platform review, is Memorifund Ai Platform legit, Memorifund Ai Platform scam, automated trading platform review',
     canonical: `${SITE}/memorifund-ai-platform-review-australia-scam`,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
     type: 'article',
-    ogImageAlt: 'Memorifund Ai Platform review Australia, is it a scam or legit?',
+    ogImageAlt: 'Memorifund Ai Platform review, is it a scam or legit?',
     schema: [
-      webPage('Memorifund Ai Platform Review Australia: Scam or Legit?', `${SITE}/memorifund-ai-platform-review-australia-scam`, 'A straight Memorifund Ai Platform review for Australian traders, features, benefits, getting started, and whether the platform is a scam or legit.'),
+      webPage('Memorifund Ai Platform Review: Scam or Legit?', `${SITE}/memorifund-ai-platform-review-australia-scam`, 'A straight Memorifund Ai Platform review, features, benefits, getting started, and whether the platform is a scam or legit.'),
       breadcrumb('Memorifund Ai Platform Review', '/memorifund-ai-platform-review-australia-scam'),
     ],
   },
@@ -248,7 +245,7 @@ export const seo = {
   terms: {
     title: 'Terms of Use, Memorifund Ai Platform',
     description:
-      'Read the Memorifund Ai Platform Terms of Use, the rules that govern use of the platform and its services for users in Australia.',
+      'Read the Memorifund Ai Platform Terms of Use, the rules that govern use of the platform and its services.',
     keywords: 'Memorifund Ai Platform terms of use, automated trading terms, platform terms',
     canonical: `${SITE}/terms`,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',

@@ -69,7 +69,7 @@ export default function About() {
             </h1>
             <p className="lead">
               Memorifund Ai Platform studies the market around the clock and turns what it finds into clear, actionable
-              opportunities. Our goal is simple, give every trader across Australia the tools to invest with
+              opportunities. Our goal is simple, give every trader the tools to invest with
               confidence and full transparency.
             </p>
             <div className="about-cta">

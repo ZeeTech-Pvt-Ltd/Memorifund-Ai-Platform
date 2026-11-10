@@ -26,7 +26,7 @@ export default function Header() {
   const route = ROUTE_BY_PATH[pathname] || '404'
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const ids = useMemo(() => ['top', 'experience', 'priorities', 'faq', 'portfolio'], [])
+  const ids = useMemo(() => ['top', 'how', 'faq'], [])
   const active = useScrollSpy(ids)
 
   // Route links (/about, /contact…) are active on their own page; home

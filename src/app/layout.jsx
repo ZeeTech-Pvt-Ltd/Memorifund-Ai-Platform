@@ -26,9 +26,9 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 const SITE_NAME = 'Memorifund Ai Platform'
-const DEFAULT_TITLE = 'Memorifund Ai Platform: AI-Powered Trading in Australia'
+const DEFAULT_TITLE = 'Memorifund Ai Platform: AI-Powered Trading'
 const DEFAULT_DESCRIPTION =
-  'Memorifund Ai Platform, AI-powered automated trading for Australia. 24/7 automated strategies, live signals, bank-grade security. Start with just AU$250.'
+  'Memorifund Ai Platform, AI-powered automated trading. Clear signals, simple explanations and full control over your money.'
 
 // Site-wide defaults. Each page overrides title, description, keywords,
 // robots, canonical, Open Graph and Twitter from src/data/seo.js through
@@ -38,7 +38,7 @@ export const metadata = {
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
   keywords:
-    'Memorifund Ai Platform, automated trading platform australia, AI trading platform, automated crypto trading, AI trading Australia',
+    'Memorifund Ai Platform, automated trading platform, AI trading platform, automated crypto trading, AI trading',
   openGraph: {
     siteName: SITE_NAME,
     title: DEFAULT_TITLE,
@@ -49,7 +49,7 @@ export const metadata = {
         url: `${SITE}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Memorifund Ai Platform, AI-powered automated trading platform for Australia',
+        alt: 'Memorifund Ai Platform, AI-powered automated trading platform',
         type: 'image/png',
       },
     ],

@@ -12,7 +12,7 @@ export const nav = [
 ]
 
 export const hero = {
-  eyebrow: '🇦🇺 Chosen by traders across Australia',
+  eyebrow: 'Chosen by traders',
   title: 'Trade With Confidence,',
   titleMark: 'Even If You’re Just Starting',
   lead: 'Get clear market signals, simple explanations and full control over your money. Memorifund Ai Platform helps you trade with a plan, not a guess.',
@@ -28,13 +28,6 @@ export const hero = {
     { value: '$500M+', label: 'Client deposits' },
   ],
 }
-
-export const metrics = [
-  { value: '4M+', label: 'Verified users', solid: false },
-  { value: '98+', label: 'Countries served', solid: false },
-  { value: '$500M+', label: 'Client deposits', solid: true },
-  { value: '24/7', label: 'Market access', solid: false },
-]
 
 export const steps = [
   {
@@ -68,87 +61,34 @@ export const steps = [
   },
 ]
 
-export const trustStrip = [
-  'Strong encryption: Your personal details are locked and protected',
-  'Two-step login: Only you can get into your account',
-  'Clear fees: Every cost is shown upfront. No surprises',
-  'Full control: No trade happens without your approval',
+// The brief puts the security points in their own section, so the strip that
+// used to sit under the onboarding steps is empty.
+export const trustStrip = []
+
+// Brief section 5, Markets.
+export const markets = [
+  { k: 'Crypto', v: 'Trade popular coins like Bitcoin and Ethereum.' },
+  { k: 'Forex', v: 'Trade world currencies like USD, EUR and GBP.' },
+  { k: 'Stocks', v: 'Follow big companies from around the world.' },
+  { k: 'Commodities', v: 'Trade gold, silver and oil.' },
 ]
 
-export const experience = {
-  eyebrow: 'Introduction',
-  titleA: 'What Is ',
-  titleMark: 'Memorifund Ai Platform?',
-  lead: [
-    'Memorifund Ai Platform is an online trading platform designed to bring market tools and account management into one easy-to-use dashboard. Users can follow market activity, review available trading opportunities and manage their account from one place.',
-    'The platform is designed to make the trading process easier to understand, whether you are new to online trading or already have experience.',
-  ],
-  rows: [
-    {
-      title: 'AI Chart Analysis',
-      text: "The chart view keeps price movement in one clear picture, so you can see how a market has travelled and where it sits right now. Candles, price lines and simple markers point out the levels that tend to matter, and the whole chart stays easy to follow from a quick glance. It is a straightforward way to gauge a trend before you decide your next move.",
-      list: [
-        'Clean charts for Bitcoin, Ethereum, stocks and forex',
-        'Support and resistance levels marked straight on the chart',
-        'Pick a time frame that suits you and read the market at your own pace',
-      ],
-    },
-    {
-      title: 'Paper Trading Simulator',
-      text: 'Paper trading gives you a practice account that comes with virtual funds, so you can place trades and watch how they play out without risking real money. It works the same way as a live account, from the order screen to position sizes, which makes it a simple place to learn the layout before you commit. Move to a funded account whenever you feel ready.',
-      list: [
-        'A virtual balance to practise with before you deposit',
-        'The same order screen you get on a live account',
-        'Reset the balance and start over whenever you like',
-      ],
-    },
-    {
-      title: 'AI Strategy Builder',
-      text: 'Building a strategy starts with a blank sheet and the conditions that matter to you. Pick a market, set the price levels you want to watch, and decide what should happen when those levels are reached, all from one screen. Save it when it looks right, then come back and adjust it whenever your thinking changes.',
-      list: [
-        'Start from a blank sheet and add the conditions you want',
-        'Set your own entry, exit and stop levels on one screen',
-        'Keep as many strategies as you like and tweak them later',
-      ],
-    },
-    {
-      title: 'Risk Management',
-      text: 'Good risk management starts before you open a position, with a clear idea of how much you are willing to put on the line. Set your own limits, pick a position size that suits your balance, and place a stop level so one trade can never do more damage than you planned. Every figure is shown before you confirm, so nothing is left to guesswork.',
-      list: [
-        'Set your own limits and position sizes before you trade',
-        'Stop levels in place so no single trade does too much damage',
-        'Clear balances and records you can check at any time',
-      ],
-    },
-  ],
-}
+// Brief section 7, Who It's For.
+export const whoItsFor = [
+  { k: 'First-time traders', v: 'Start with easy steps and plain explanations.' },
+  { k: 'Working people', v: 'Check the market in a few minutes a day.' },
+  { k: 'Experienced traders', v: 'Get extra signals and cover more markets.' },
+]
 
-export const priorities = {
-  eyebrow: 'Why Memorifund Ai Platform',
-  title: 'Our ',
-  titleMark: 'priorities',
-  lead: 'Security, simplicity, and total openness, at every single step.',
-  cards: [
-    {
-      big: '95%', cap: 'cold storage',
-      title: 'Security', sub: 'Steps we take to help keep your funds safe',
-      items: ['95% of holdings kept in cold storage', 'Two-factor authentication plus 256-bit SSL encryption', 'Robust data-privacy protections'],
-      tags: ['SSL', '2FA'],
-    },
-    {
-      big: '3', bigNote: 'clicks', cap: 'to start', alt: true,
-      title: 'Simplicity', sub: 'Designed for everyone, not just experts',
-      items: ['Reach your first trade in just three clicks', 'An automated AI trading assistant', 'An interface that fits traders of every level'],
-      tags: ['AI-Powered'],
-    },
-    {
-      big: '0', cap: 'hidden fees',
-      title: 'Transparency', sub: 'No surprises, ever',
-      items: ['Clear pricing from day one', 'No hidden charges', 'Live reserve audits'],
-      tags: ['Live audits'],
-    },
-  ],
-}
+// Brief section 8, Security and Transparency.
+export const security = [
+  { k: 'Strong encryption', v: 'Your personal details are locked and protected.' },
+  { k: 'Two-step login', v: 'Only you can get into your account.' },
+  { k: 'Clear fees', v: 'Every cost is shown upfront. No surprises.' },
+  { k: 'Full control', v: 'No trade happens without your approval.' },
+]
+
+export const securityNotice = 'Trading has risk. You may lose money. No one can promise profits.'
 
 export const features = [
   {
@@ -204,22 +144,6 @@ export const testimonials = {
   summary: [],
 }
 
-export const portfolio = {
-  eyebrow: 'Portfolio management',
-  title: 'Manage Your ',
-  titleMark: 'Portfolio with Data-Driven',
-  titleEnd: ' Trading',
-  lead: 'Through the Memorifund Ai Platform platform, traders in Australia enjoy a clean, data-first experience, live performance tracking plus tools that are refreshingly simple to understand and use.',
-  checks: [
-    'Live performance analytics',
-    'Clear guidance at every step',
-    'Withdraw your funds whenever you need to',
-  ],
-}
-
-// Full FAQ for the standalone /faq page. Answers are the platform's own
-// (shared with the .net property) with [label](/route) tokens hyperlinked on
-// the page; the FAQPage schema strips the tokens before emitting JSON-LD.
 export const faqPage = [
   {
     q: 'What does Memorifund Ai Platform do?',
@@ -292,18 +216,8 @@ export const faq = [
 
 // Markets (doc section 5) and Who It's For (doc section 7), which both fit the
 // key/value shape of this table.
-export const capabilities = [
-  { k: 'Crypto', v: 'Trade popular coins like Bitcoin and Ethereum' },
-  { k: 'Forex', v: 'Trade world currencies like USD, EUR and GBP' },
-  { k: 'Stocks', v: 'Follow big companies from around the world' },
-  { k: 'Commodities', v: 'Trade gold, silver and oil' },
-  { k: 'First-time traders', v: 'Start with easy steps and plain explanations' },
-  { k: 'Working people', v: 'Check the market in a few minutes a day' },
-  { k: 'Experienced traders', v: 'Get extra signals and cover more markets' },
-]
-
 export const footer = {
-  blurb: 'Memorifund Ai Platform is an AI-driven automated trading platform for users in Australia, automated strategies, live market insight, and dependable security all in one place.',
+  blurb: 'Memorifund Ai Platform is an AI-driven automated trading platform, automated strategies, live market insight, and dependable security all in one place.',
   company: [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },

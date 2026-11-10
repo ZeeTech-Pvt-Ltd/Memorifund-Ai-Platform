@@ -29,7 +29,7 @@ export default function Faq() {
     <section className="section" id="faq">
       <div className="container">
         <div className="section-head reveal">
-          <h2 className="h2">Frequently Asked <mark>Questions</mark></h2>
+          <h2 className="h2">FAQs</h2>
         </div>
 
         <div className="faq">

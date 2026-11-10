@@ -711,7 +711,7 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- Capabilities ---------- */
 .caps { background: var(--primary-lightest); }
-.caps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.caps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
 .cap-row {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   background: var(--card); border: 1px solid var(--line); border-radius: var(--r-sm);
@@ -1412,7 +1412,7 @@ body.menu-open { overflow: hidden; }
 .prec-visual { opacity: .92; }
 
 /* ---------- Capabilities (definition cards) ---------- */
-.caps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.caps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
 .cap-card {
   display: flex; flex-direction: column; gap: 5px;
   background: var(--card); border: 1px solid var(--card-border); border-radius: var(--r-md);

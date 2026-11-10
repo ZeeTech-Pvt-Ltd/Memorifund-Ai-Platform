@@ -7,8 +7,7 @@ export default function Precision() {
     <section className="section precision">
       <div className="container">
         <div className="section-head reveal">
-          <h2 className="h2">Precision, Speed, and <mark>Security</mark>, All in One System</h2>
-          <p className="lead">A closer look at the details that set Memorifund Ai Platform apart.</p>
+          <h2 className="h2">Features</h2>
         </div>
 
         <div className="prec-list">

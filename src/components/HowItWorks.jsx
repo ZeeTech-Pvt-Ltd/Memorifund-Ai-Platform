@@ -1,6 +1,5 @@
-import { Icon, Check, ArrowRight } from './icons.jsx'
-import PhotoBand from './PhotoBand.jsx'
-import { steps, trustStrip } from '../data/content.js'
+import { Icon, ArrowRight } from './icons.jsx'
+import { steps } from '../data/content.js'
 
 // `asPage` is set when this section renders as the full /how-it-works page,
 // so its heading becomes the page's single H1 (styling stays identical).
@@ -13,12 +12,7 @@ export default function HowItWorks({ asPage = false }) {
     <section className="section how" id="how">
       <div className="container">
         <div className="section-head reveal">
-          <Heading className="h2">Get Started in <mark>3 Easy Steps</mark></Heading>
-          {asPage ? (
-            <p className="lead">A clear, guided path from sign-up to your first trade, built for traders across Australia, with no jargon, no complications, and nothing extra to figure out.</p>
-          ) : (
-            <p className="lead">A clear, guided path from sign-up to your first trade, with no jargon, no complications, and nothing extra to figure out.</p>
-          )}
+          <Heading className="h2">Open Your Account in 4 Easy Steps</Heading>
         </div>
 
         <div className="steps">
@@ -37,21 +31,7 @@ export default function HowItWorks({ asPage = false }) {
           ))}
         </div>
 
-        <div className="how-strip reveal">
-          {trustStrip.map((t) => (
-            <p key={t}>
-              <span className="tick"><Check size={16} /></span> {t}
-            </p>
-          ))}
-        </div>
       </div>
-
-      <PhotoBand
-        photo="charts"
-        kicker="No Experience Needed"
-        title="You Don't Need To Know The Jargon First"
-        text="Most people start without a trading background. The platform explains each step as you reach it, and support is available around the clock if you'd rather ask."
-      />
     </section>
   )
 }

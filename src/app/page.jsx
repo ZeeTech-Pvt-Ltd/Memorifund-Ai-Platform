@@ -1,51 +1,34 @@
 import Hero from '../components/Hero.jsx'
-import Metrics from '../components/Metrics.jsx'
-import Experience from '../components/Experience.jsx'
-import Priorities from '../components/Priorities.jsx'
 import Features from '../components/Features.jsx'
+import HowItWorks from '../components/HowItWorks.jsx'
+import BulletSection from '../components/BulletSection.jsx'
 import Precision from '../components/Precision.jsx'
-import CtaBanner from '../components/CtaBanner.jsx'
 import Testimonials from '../components/Testimonials.jsx'
-import Portfolio from '../components/Portfolio.jsx'
-import PhotoBand from '../components/PhotoBand.jsx'
-import Capabilities from '../components/Capabilities.jsx'
 import Faq from '../components/Faq.jsx'
 import FinalCta from '../components/FinalCta.jsx'
 import JsonLd from '../components/JsonLd.jsx'
+import { markets, whoItsFor, security, securityNotice } from '../data/content.js'
 import { seo } from '../data/seo.js'
 import { metadataFor } from '../lib/metadata.js'
 
 export const metadata = metadataFor('home')
 
+// Section for section from the content brief: hero, quick highlights, why
+// choose us, how to get started, markets, features, who it's for, security,
+// testimonials (hidden until there are real ones), FAQs, final CTA.
 export default function HomePage() {
   return (
     <>
       <JsonLd data={seo.home.schema} />
 
       <Hero />
-      <Metrics />
-      <Experience />
-      <Priorities />
       <Features />
+      <HowItWorks />
+      <BulletSection title="Markets" items={markets} />
       <Precision />
-
-      <CtaBanner
-        title="Join Memorifund Ai Platform Today"
-        text="Clear signals, simple explanations and full control over your money. Start with a plan, not a guess."
-        cta="Create Free Account"
-      />
-
+      <BulletSection title="Who It’s For" items={whoItsFor} />
+      <BulletSection title={'Security & Transparency'} items={security} notice={securityNotice} />
       <Testimonials />
-      <Portfolio />
-      <PhotoBand
-        photo="lines"
-        kicker="One Place"
-        title="Everything You Follow, In One Place"
-        text="Crypto, forex and stocks all sit together, so checking what moved doesn't mean switching between different tools."
-      />
-      {/* Spec table first, then FAQ last so the final doubt-handling flows
-          straight into the final sign-up CTA (no dry table in between). */}
-      <Capabilities />
       <Faq />
       <FinalCta />
     </>
