@@ -199,7 +199,7 @@ export const seo = {
   'how-it-works': {
     title: 'How Memorifund Ai Platform Works in 3 Easy Steps',
     description:
-      'Start with Memorifund Ai Platform in two minutes. Create your account, deposit from just AU$250, and let the AI trade around the clock. No hidden fees.',
+      'Start with Memorifund Ai Platform in two minutes. Create your account, deposit from just $250, and let the AI trade around the clock. No hidden fees.',
     keywords: 'how to start automated trading, Memorifund Ai Platform sign up, AI trading steps, automated trading for beginners',
     canonical: `${SITE}/how-it-works`,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
