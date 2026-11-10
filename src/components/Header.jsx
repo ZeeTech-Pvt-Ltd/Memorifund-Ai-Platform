@@ -17,7 +17,7 @@ const ROUTE_BY_PATH = {
   '/disclosure': 'disclosure',
   '/thank-you': 'thank-you',
   '/how-it-works': 'how-it-works',
-  '/memorifund-ai-platform-review-australia-scam': 'memorifund-ai-platform-review-australia-scam',
+  '/memorifund-ai-platform-review': 'memorifund-ai-platform-review',
   '/faq': 'faq',
 }
 

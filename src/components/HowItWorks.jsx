@@ -5,14 +5,17 @@ import { steps } from '../data/content.js'
 // so its heading becomes the page's single H1 (styling stays identical).
 export default function HowItWorks({ asPage = false }) {
   const Heading = asPage ? 'h1' : 'h2'
-  // Track the section heading one level down, so the step titles never skip a
-  // level (h1 -> h3 on the standalone page was failing the a11y heading order).
-  const StepHeading = asPage ? 'h2' : 'h3'
+  // The brief has two levels here: "How to Get Started", then the H3 "Open Your
+  // Account in 4 Easy Steps". Step titles sit one below the subheading so the
+  // heading order never skips.
+  const SubHeading = asPage ? 'h2' : 'h3'
+  const StepHeading = asPage ? 'h3' : 'h4'
   return (
     <section className="section how" id="how">
       <div className="container">
         <div className="section-head reveal">
-          <Heading className="h2">Open Your Account in 4 Easy Steps</Heading>
+          <Heading className="h2">How to Get Started</Heading>
+          <SubHeading className="how-sub">Open Your Account in 4 Easy Steps</SubHeading>
         </div>
 
         <div className="steps">

@@ -3,12 +3,12 @@ import JsonLd from '../../components/JsonLd.jsx'
 import { seo } from '../../data/seo.js'
 import { metadataFor } from '../../lib/metadata.js'
 
-export const metadata = metadataFor('memorifund-ai-platform-review-australia-scam')
+export const metadata = metadataFor('memorifund-ai-platform-review')
 
 export default function ReviewPage() {
   return (
     <>
-      <JsonLd data={seo['memorifund-ai-platform-review-australia-scam'].schema} />
+      <JsonLd data={seo['memorifund-ai-platform-review'].schema} />
       <BlogArticle />
     </>
   )

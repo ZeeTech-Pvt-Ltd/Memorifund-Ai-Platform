@@ -6,7 +6,7 @@ export const nav = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   { label: 'How It Works', href: '/how-it-works' },
-  { label: 'Reviews', href: '/memorifund-ai-platform-review-australia-scam' },
+  { label: 'Reviews', href: '/memorifund-ai-platform-review' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -167,11 +167,11 @@ export const faqPage = [
   },
   {
     q: 'What is the minimum deposit?',
-    a: 'You can start with [Amount].',
+    a: 'You can start with $250.',
   },
   {
     q: 'How long do withdrawals take?',
-    a: '[Add your withdrawal time here.]',
+    a: 'Withdrawals take 1 to 3 business days.',
   },
   {
     q: 'Can I lose money?',
@@ -202,11 +202,11 @@ export const faq = [
   },
   {
     q: 'What is the minimum deposit?',
-    a: 'You can start with [Amount].',
+    a: 'You can start with $250.',
   },
   {
     q: 'How long do withdrawals take?',
-    a: '[Add your withdrawal time here.]',
+    a: 'Withdrawals take 1 to 3 business days.',
   },
   {
     q: 'Can I lose money?',

@@ -211,18 +211,18 @@ export const seo = {
     ],
   },
 
-  'memorifund-ai-platform-review-australia-scam': {
+  'memorifund-ai-platform-review': {
     title: 'Memorifund Ai Platform Review: Scam or Legit?',
     description:
       'Memorifund Ai Platform review, is it a scam or legit? Features, benefits, how to get started, plus a straight answer.',
     keywords: 'Memorifund Ai Platform review, is Memorifund Ai Platform legit, Memorifund Ai Platform scam, automated trading platform review',
-    canonical: `${SITE}/memorifund-ai-platform-review-australia-scam`,
+    canonical: `${SITE}/memorifund-ai-platform-review`,
     robots: 'index, follow, max-image-preview:large, max-snippet:-1',
     type: 'article',
     ogImageAlt: 'Memorifund Ai Platform review, is it a scam or legit?',
     schema: [
-      webPage('Memorifund Ai Platform Review: Scam or Legit?', `${SITE}/memorifund-ai-platform-review-australia-scam`, 'A straight Memorifund Ai Platform review, features, benefits, getting started, and whether the platform is a scam or legit.'),
-      breadcrumb('Memorifund Ai Platform Review', '/memorifund-ai-platform-review-australia-scam'),
+      webPage('Memorifund Ai Platform Review: Scam or Legit?', `${SITE}/memorifund-ai-platform-review`, 'A straight Memorifund Ai Platform review, features, benefits, getting started, and whether the platform is a scam or legit.'),
+      breadcrumb('Memorifund Ai Platform Review', '/memorifund-ai-platform-review'),
     ],
   },
 
