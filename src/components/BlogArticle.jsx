@@ -1,4 +1,4 @@
-// Blog review page: "Memorifund Ai Platform Review Australia, Scam or Legit?"
+// Blog review page: "Memorifund Ai Platform Review, Scam or Legit?"
 // Rebuilt as an on-site article from the company's own review post, so the
 // search intent behind that URL ("is it a scam?") is answered on the official
 // domain instead of sending readers elsewhere. External "create account" links
@@ -157,14 +157,6 @@ export default function BlogArticle() {
                 hour, from real people.
               </li>
             </ul>
-          </div>
-
-          {/* First CTA */}
-          <div className="blog-cta reveal">
-            <h3>Ready to put the platform to work?</h3>
-            <p>Join traders and let the AI scan the markets for you, around the clock.</p>
-            <a className="btn btn-primary" href={REGISTER_URL}>Create Your Trading Account Now</a>
-            <a className="btn-link" href={REGISTER_URL}>Read More, Click Here</a>
           </div>
 
           {/* Benefits (numbered, 9) */}

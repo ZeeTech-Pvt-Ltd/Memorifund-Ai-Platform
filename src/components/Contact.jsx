@@ -13,7 +13,6 @@ import { countries } from '../data/countries.js'
 const info = [
   { icon: 'mail', title: 'Email', value: 'support@memorifund-ai-platform.com', hint: 'Replies within a few hours' },
   { icon: 'clock', title: 'Support Hours', value: '24/7, 365 days a year', hint: 'Round-the-clock assistance' },
-  { icon: 'pin', title: 'Location', value: 'Melbourne, Victoria', hint: 'Support available around the clock' },
   { icon: 'zap', title: 'Response Time', value: 'Most questions answered within a few hours', hint: 'Fast, helpful support' },
 ]
 
